@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\PYG{k+kd}{class} \PYG{n+nc}{Apple}\PYG{+w}{ }\PYG{k+kd}{extends}\PYG{+w}{ }\PYG{n}{Animal}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{weight}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Color}\PYG{+w}{ }\PYG{n}{color}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{private}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{fall}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{	}\PYG{c+c1}{// fall(location)}
+\PYG{+w}{		}\PYG{p}{...}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{class} \PYG{n+nc}{Animal}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{breathe}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
