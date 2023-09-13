@@ -1,0 +1,199 @@
+
+\section{2023-09-05}
+
+\subsection{Введение}
+
+Пастор -- прочие элементы дискретной математики, в большинстве -- комбинаторика
+
+Карпов -- теория графов
+
+\subsection{Sets and relations}
+Reading materials (about sets theory)
+\begin{enumerate}
+	\item Senpinsky (med)
+	\item Vilenkin (easy)
+	\item Yekh (hard, ~6th semester)
+\end{enumerate}
+
+\href{https://logic.pdmi.ras.ru/~pastor/ITMO/2023-24/}{Slides}
+
+
+\begin{definition}[Sets]
+	множество — это группа объектов (неформально)\end{definition}
+
+\begin{itemize}
+	\item objects of a set are its elements
+	\item any object can be an element of a set 
+	\item $x \in Y$ means <<$x$ is an element of a set $Y$>>
+	\item $\emptyset$ is a set that has 0 elements 
+\end{itemize}
+\begin{itemize}
+	\item it's really hard to define set {\bf{formally}}
+		\begin{itemize}
+		\item formally, sets are also elements of another sets 
+		\item other objects have to be interpreted using any sets
+	\end{itemize}
+\end{itemize}
+
+We are learning {\bf{naive sets theory}}
+
+\subsection{Defining a set}
+
+\begin{itemize}
+	\item Перечисление
+	\begin{example}[]
+		$Y= \left\{ 1,3,7,19,2021 \right\} $
+	\end{example}
+	\item Defining a set using condition
+
+		$Y = \left\{ x \in X | \ condition \ \right\} $
+
+	\begin{example}[]
+		$Y = \left\{ n \in Z | n \ \vdots \ 2 \right\} $
+	\end{example}
+
+\end{itemize}
+	
+\begin{itemize}
+	\item If all elements of $Y$ are in $X$, then $Y$ is an subset of $X$. $Y \subset X$
+	\begin{note}[]
+		$\mathcal{P}(X)$ -- множество всех подмножеств множества $X$
+	\end{note}
+	\begin{note}
+		We can also use $Y = \left\{ x | condition \right\} $, but we call it a class!
+	\end{note}
+\end{itemize}
+
+\[
+	X = \left\{ 1, 2 \right\}\\
+		Y = \left\{ 0, \left\{ 1, 2 \right\}, \left\{ 3 \right\}   \right\}\\
+		x \in Y, \ but \neg(x \subset Y)\\
+\]
+
+\subsection{Проблемы и парадоксы теории множеств}
+\begin{itemize}
+	\item Can a set be an item of itself?
+	\item Russel's paradox (1901): let $Y = \left\{ x | x \notin x \right\}$ 
+	\begin{itemize}
+		\item is $Y \in Y$?
+		\item this question is neither true of false.
+	\end{itemize}
+	\item in formal sets theory, $x \in x$ is forbidden (regularity axiom)
+	\item class $Y$ in Russel's paradox is not a set.
+	\item class of every possible set ($U$) is not a set
+\end{itemize}
+
+\subsection{Operations between sets}
+
+Let $A, B$ be sets. Then:
+	\begin{itemize}
+		\item $A \cap B =^{def} \left\{ x \in A | x \in B \right\}$ -- intersection
+		\item $A \cup B =^{def} \left\{ x | (x \in A \vee x \in B) \right\}$ -- union
+		\item $A \backslash B =^{def} \left\{ x \in A | x \notin B \right\}$ -- difference
+		\item $A \triangle B =^{def} \left\{ (A \cup B) \backslash (A \cap B) \right\}	$ -- symmetrical difference
+\end{itemize}
+
+$\triangleleft$  Complemention. Let $U$ be an {\it{universum}}, a set that contains every set. then 
+
+$\triangleleft$ $A = ^{def} \left\{ x \in U | x \notin A \right\}$
+
+Упорядоченные пары элементов $x$ $y$ 
+
+\[
+	(x,y) = \left\{ (x), (x,y), (y) \right\}
+\]
+
+\subsection{Dechart multiplication}
+
+\begin{definition}[]
+	$A \times B =^{def} \left\{ (x, y) \ | \ (x \in A \& y \in B) \right\}$ 
+\end{definition}
+
+
+\begin{example}[]
+	let $X = \left\{ 1,2,3 \right\}, Y = \left\{ 1,2,3,4,5 \right\}$. Then we got a matrix:
+	\[
+		\begin{pmatrix} 
+		(x_1, y_1) & (x_1, y_2) & ... & (x_1, y_5) \\	
+		(x_2, y_1) & (x_2, y_2) & ... & (x_2, y_5) \\	
+		(x_3, y_1) & (x_3, y_2) & ... & (x_3, y_5) \\	
+	\end{pmatrix}
+	\]
+\end{example}
+
+
+
+Аналогично мы можем определить умножение для $n$ множеств. (можно сделать индукцией)
+\[
+	A_1 \times A_2 \times \dots \times A_n = \left\{ (x_1,x_2, \dots, x_n | (x_1 \in A_1 \& \dots \& x_n \in A_n)) \right\}
+\]
+
+We assume that $A^{1} = A$
+
+If it's not a multiset, then $\left\{ 3, 3 \right\} = \left\{ 3 \right\}$
+ 
+\subsection{Binary relations}
+
+Let $R \subset X \times Y$
+
+
+If $X = Y$, then  $R$ is a binary relation on $X$.
+
+Lets call a pair $(x,y) : x \in X \& y \in Y$, {\it{appropriate}} 
+
+An appropriate pair $(x,y)$ is written: $xRy$.
+
+\begin{note}[]
+	Binary relation is either {\it{true}} or {\it{false}} ($R$ is a set of pairs, for which the statement $x \in X \& y \in Y$ is true)
+\end{note}
+
+\begin{note}[]
+	Binary relation can be interpreted as an oriented graph: elements of a set is it's vertices, and edges is drawn only if $xRy$.
+\end{note}
+
+\subsection{Binary and n-ary relations}
+Similarly, $R \subset X_1 \times \dots \times X_n$. If $X_1 = X_2 = \dots = X_n$, then $R$ is an n-ary relation on $X$.
+
+\begin{example}[]
+	\begin{enumerate}
+		\item Equality ($a = b$) -- binary relation or $\R$ 
+		\item divisibility ($a \vdots b$) -- binary relation on $\Z$
+		\item let $G = (V, E)$, then:
+			 \begin{itemize}
+				\item смежность графа --  на $V$.
+				\item инцидентность -- между $V, E$.
+			\end{itemize}
+		\item $A,B,C$ form a line -- 3-ary relation on a plain
+	\end{enumerate}
+\end{example}
+
+\subsection{Properties of relations}
+
+\begin{definition}[]
+	Binary relation is called:
+	\begin{itemize}
+		\item reflexive, if $xRx$ is true  $\forall x \in X$
+		\item irreflexive, if $xRx$ is false  $ \forall x \in X$
+		\item symmetrical, if $xRy \Rightarrow yRx$
+		\item antisymmetrical, if $xRy \& yRx \Rightarrow x = y$.
+		\item transitive, if $xRy, yRz \Rightarrow xRz$ 
+	\end{itemize}
+\end{definition}
+
+\begin{definition}[]
+	Binary relation is relation of identity if it's reflexive, symmetrical and transitive
+\end{definition}
+
+\begin{note}[]
+	Relation of identity splits the set to {\bf{identity classes}}, so for any 2 elements of 1 class are equal, and 2 elements from different classes aren't
+\end{note}
+
+Examples:
+\begin{itemize}
+	\item $a = b$ 
+	\item $a || b$
+	\item $a \sim b$
+	\item division of polygons by amount of vertices.
+\end{itemize}
+
+

@@ -1,0 +1,379 @@
+\section{2023-09-12}
+
+\subsection{Order relation}
+
+\begin{itemize}
+	\item \begin{definition}[]
+			Binary relation $\prec$ on $X$ is called \textit{a relation of частичного order}, if it's antisymmetrical ond transitive
+		\end{definition}
+	\item If $\prec$ is irreflexive, then it's called an relation of strict order 
+	\item If it's reflexive -- it's called an unstrict relation of particular order 
+		\begin{itemize}
+			\item As usual, for unstrict relation we use $ \geq and \leq $.
+		\end{itemize} 
+	\item A set is particularly sorted if the order relation is defined.
+	\begin{itemize}
+		\item Formally, a set of sorted order is sorted pair $(<, X)$, whwre $X$ is a set and $<$ is order relation.
+		\item In particularly sorted set some pairs are \textit{uncompareable}. Then can $\exists a,b \in X$, such that every expression $a = b, b < a, a < b$ is false. 
+	\end{itemize} 
+\end{itemize}
+
+
+\subsection{Relation of linear order}
+
+\begin{definition}[]
+	Binary relation $<$ on X is called anj relation of linear order, if it's a relation of particular order and  $\forall a,b \in X: a = b \vee a < b \vee b < a$.
+\end{definition}
+
+In this case, a pair $(X, <)$ is called linearly sorted set
+
+\begin{example}[]
+	\begin{enumerate}
+		\item $a < b$ (on $\R$ )
+		\item $a \vdots b$ (on $\N)$)
+		\item let $X$ be a set. Then, $A \subset B$ is a particular orderly relation on $\mathcal{P}(X)$ 
+	\end{enumerate}
+\end{example}
+
+\subsection{Mappings and functions}
+
+Not formally, \textit{a mapping} from $X$ to $Y$ is a rule $f$ such that: $\forall x \in X \exists ! y \in Y: f(x) = y$
+
+\begin{definition}[]
+	\begin{itemize}
+		\item A binary relation $f \subset X \times Y$ is \textit{mapping} from $X \mapsto Y$, if $\forall x \in X \exists ! y \in Y$, such that only one pair $(x, y) \in f$ exists.
+		\item Notation: $f: X \mapsto Y$
+		\item Second element of pair is denoted as $f(x)$ and it's called an image of element $x$ for mapping $f$.
+		\item if $y = f(x)$, then $x$ is prototype of y 
+		\item Different to the image, a prototype is not guaranteed to exist, and prototype can be not the only one 
+	\end{itemize}
+\end{definition}
+
+\subsection{Injection, surjection and biection}
+
+\begin{definition}[]
+	A mapping $f: X \mapsto Y$ is called:
+	\begin{itemize}
+		\item an injection, if $\forall x_1, x_2 \in X: x_1 \neq x_2: f(x_1) \neq f(x_2)$
+		\item a surjection, if $\forall y \in Y \exists x \in X: f(x) = y$.
+		\item a biection, if it's an injection and a surjection. 
+	\end{itemize} 
+\end{definition}
+
+\begin{note}[]
+	\begin{itemize}
+		\item A biection is a one-to-one correspondence between $X, Y : \forall x \in X \exists ! y \in Y \wedge \forall y \in Y \exists ! x \in X$.
+		\item in particular, if $X, Y$ are not endless sets and $\exists $ biection , then $|X| = |Y|$ 
+	\end{itemize}
+\end{note}
+
+\subsection{Composition of relations}
+
+\begin{definition}[]
+	A composition of mappings $f: X \mapsto Y \ \& \ g: Y \mapsto Z$ is mapping $g \circ f: X \mapsto Z$, that is defined by formula $(g \circ f) (x) = g(f(x))$
+\end{definition}
+
+A mapping is called \textbf{reversible}.
+
+\begin{itemize}
+	\item \begin{definition}[]
+			A mapping $g: Y \mapsto X$ is called reverse mapping, if both $f \circ g$ and $g \circ f$ are equal
+		\end{definition}
+	\item Then, $g(f(x)) = x \forall x \in X$, and $f(g(y)) = y \forall y \in Y$. 
+\end{itemize}
+
+\subsection{Reverse cryteria}
+
+\begin{theorem}[]
+	A relation $f: X \mapsto Y$ is reversible $\Leftrightarrow f$ is a biection.
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	$ \Leftarrow $: $\forall y \in Y$ we denote $f^{-1}(y)$ -- the only one prototype of $y$.
+	
+Then, $f^{-1}: Y \mapsto X$ -- is reverse mapping to $f$.
+
+$ \Rightarrow $: Let $f^{-1}$ is reverse mapping to $f$.
+
+$f$ is a injection, because of $f(x) = f(y) \Rightarrow x = f^{-1}(f(x)) = y = f^{-1}(f(y)) \Rightarrow x = y$ 
+
+$f$ is a surjection, because $\forall y \in Y$ we have: $y = f^{-1}(f(y))$ 
+\end{proof}
+
+\subsection{finite sets}
+
+\begin{itemize}
+	\item Let $X$ be a finite set. A number of it's elements we denote as $|X|$.
+	\item We already know that $|X| = |Y| \Leftrightarrow $ we can set a biection between $X, Y$. 
+\end{itemize}
+
+\begin{lemma}
+	If $|X| = m$ and $|Y| = n$, then $|X \times Y| = mn$
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	Every $m$ elements are in $n$ pairs with $Y$ set.
+\end{proof}
+
+\begin{corollary}[]
+	if $|X_i| = m$, where $i \in [1..k]$, then $|X_1 \times X_2 \times  \dots \times X_k| = m_1 \cdot m_2 \cdot \dots \cdot m_{k}$.
+\end{corollary}
+
+\begin{exercise}
+	Proof using induction
+\end{exercise}
+
+\subsection{Finite sets, a number of subsets}
+
+\begin{theorem}[]
+	If $|X| = m$, then  $\mathcal{P}(X) = 2^{m}$
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Trivial.
+\end{proof}
+
+\begin{note}[]
+	We have literally built a bisection between $\mathcal{P}, \left\{ 0,1 \right \}^{m} $ 
+	
+	$ \triangleleft $ $A \subset X$ corresponds to $(a_1, \dots , a_{m}) \in \left\{ 0, 1 \right \}^{m} $, where: \[
+		a_i = \begin{cases}
+			1, \text{ if } x_i \in A \\
+			0, \text{ if } x_i \notin A \\
+		\end{cases}
+	\]
+\end{note}
+
+\subsection{Finite sets: a number of relations}
+
+\begin{theorem}[]
+	Let $|X| = k, |Y| = n$, then
+	\begin{enumerate}
+		\item A number of mappings is $n^{k}$
+		\item A number of injections $f: X \mapsto Y$ is $n(n-1) \dots (n-k+1)$ 
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	\begin{enumerate}
+		\item $\forall x \in X$ we can choose an image by only $n$ choices
+		\item An image $x_1$ can be chosen by $n$ choices. Then -- $(n-1)$, and so on.
+	\end{enumerate}
+\end{proof}
+
+\begin{note}[]
+	For $n \geq K$ we have: $n(n-1) \dots (n-k+1) = \frac{n!}{(n-k)!}$
+\end{note}
+
+\begin{exercise}
+	What is the number of surjections from $X$ to $Y$?
+\end{exercise}
+
+\subsection{Finite sets: permutations and размещения}
+
+\begin{definition}[Permutation]
+	A permutation is any biection $\sigma: X \mapsto X$.
+\end{definition}
+
+\begin{corollary}[]
+	If $|X| = n$, then  $n!$ is number of permutations.
+\end{corollary}
+
+\begin{definition}[]
+	\begin{itemize}
+		\item A number of injections $f: [1..k] \mapsto [1..n]$ is called an accomodation, from $n$ elements on  $ k$ and denoted $A^{k}_{n}$.
+		\item A number of mappings $f: [1..k] \mapsto [1..n]$is called a number of accomodations with repetitons and denoted as $\overline{A}_n^{k}$
+	\end{itemize}
+\end{definition}
+
+\begin{enumerate}
+	\item $A_n^{k}$
+\end{enumerate}
+
+\subsection{Countable sets}
+
+\begin{definition}[]
+	A set is called \textbf{countable} if $\exists f: X \mapsto \N$ (biection)
+\end{definition}
+
+\begin{note}[]
+	\begin{itemize}
+		\item That means, that we can numerate $X$ using natural numbers.
+		\item It's elements can be written as: $X = \left\{ x_1 ,x_2, \dots  \right \}$, where $x_k = f^{-1}(k)$ 
+	\end{itemize}
+\end{note}
+
+\begin{example}[]
+	\begin{itemize}
+		\item $2\N = \left\{ 2n | n \in \N \right \} $ is a set of every even number
+		\item $ \Z$ is a set of every целых чисел 
+	\end{itemize}
+\end{example}
+
+\subsection{Countability of multiplication}
+
+\begin{theorem}[]
+	$\N \times \N$ is countable.
+\end{theorem}
+
+\begin{proof}[Доказательство]
+A function $f(x,y) = \frac{(x+y-1)(x+y-2)}{2} + y$ -- biection from $\N \times N$ to $\N$.
+\end{proof}
+
+\begin{note}[]
+	$\\$
+	\begin{itemize}
+		\item This function is naming a cells of infinite table <<by diagonals>>
+		\item Another example of biection: $g(x.y) = 2^{x-1}(2y-1)$
+
+	\end{itemize}
+	
+	\end{note}
+
+\begin{corollary}[]
+	Let $X_1, X_2, \dots , X_n$ be countable sets. Then $X_1 \times X_2 \times X_3 \times \dots \times X_n$ is countable too.
+\end{corollary}
+\begin{proof}[Доказательство]
+	Proof using induction.
+\end{proof}
+
+\begin{theorem}[]
+	An infinite subset of countable set is countable.
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Let $X$ be a countable set and $A \subset X$ is it's infinite subset.
+	\begin{itemize}
+		\item Consider biection $f: X \mapsto \N$
+		\item Then $g(x) = ^{def} |\left\{ a \in A | f(a) \leq f(x) \right \} |$-- biection from $A$ to $\N$ 
+	\end{itemize}
+\end{proof}
+
+\subsection{No more that a countable set}
+
+\begin{definition}[]
+	\begin{itemize}
+		\item $X$ is \textit{no more than countable}, if $X$ is either finite or countable
+		\item $X$ is uncountable, if it's neither finite or countable. 
+	\end{itemize}
+\end{definition}
+
+\begin{theorem}[]
+	Let $X \neq  \emptyset$. Then:
+	\begin{enumerate}
+		\item $X$ is no more than countable.
+		\item $\exists f: X \mapsto \N$ (injection)
+		\item $\exists g: \N \mapsto X$ (surjection)
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	$1 \Rightarrow 3$. Let $X$ be no more than countable.
+		\begin{itemize}
+			\item If $X$ is infinite, then it's countable.
+				\begin{itemize}
+					\item Then $\exists f: X \mapsto \N$ (injection)
+					\item Then, $\exists f^{-1}: \N \mapsto X$ (surjection) 
+				\end{itemize}
+		\end{itemize}
+	\item if $X$ is finite, then $|X| = n$
+		 \begin{itemize}
+			 \item Then, a biection exists: $f: X \mapsto [1..n]$
+			 \item  Let $g(y) = \begin{cases}
+			 	f^{-1}(y), y \leq n\\
+				f^{-1}(n), y > n
+			 \end{cases}$
+		\end{itemize}
+	\item It's easy to see that $g(y)$ is a surjection.
+	
+	$3 \Rightarrow 2$. Let $g: \N \mapsto X$ -- surjection.
+	\begin{itemize}
+		\item $\forall x \in X$ it has a prototype.
+		\item Select the least prototype.
+		\item Let $f(x) = min \left\{ y \in \N | g(y) = x \right \} $ 
+		\item Easy to see, that $f: X \mapsto \N$ is an injection.
+
+		$2 \Rightarrow 1$. Let $f: X \mapsto \N$ be an injection.
+		\begin{itemize}
+			\item Consider a set $f(X) = \left\{ f(x) | x \in X \right \} $ 
+			\item Then $f: X \mapsto  f(X)$ is a biection
+			\item Because of $f(X) \subset \N$, an $f(X)$ is no more than countable.
+			\item If $f(X)$ is finite, the $X$ is finite too.
+			\item If $f(X)$ is countable, then $X$ is countable too. 
+		\end{itemize}
+	\end{itemize}
+\end{proof}
+
+\begin{corollary}[]
+	If $f: X \mapsto Y$ is an injection and $Y$ is countable, then $X$ is no more than countable.
+\end{corollary}
+
+\begin{proof}[Доказательство]
+	\begin{itemize}
+		\item Let $g: Y \mapsto \N$ be a biection
+		\item Then $g \circ f: X \mapsto \N$ -- injection 
+	\end{itemize}
+\end{proof}
+
+\begin{corollary}[]
+	If $g: Y \mapsto X$ is a surjection and $Y$ is countable, then $X$ is no more than countable.
+\end{corollary}
+
+\begin{proof}[Доказательство]
+	\begin{itemize}
+		\item Let $f: \N \mapsto Y$ -- biection
+		\item Then $g \circ f: \N \mapsto X$ -- surjection. 
+	\end{itemize}
+\end{proof}
+
+\begin{theorem}[]
+	$\Q$ is countable.
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Consider a mapping $g: \Z \times \N \mapsto \Q$, set by formula $g(a,b) = \frac{a}{b}$ 
+	\begin{itemize}
+		\item Obviously, $g$ is a surjection.
+		\item Then, $\Q$ is no more than countable.
+		\item But $\Q$ is infinite.
+		\item Then, $\Q$ is countable. 
+	\end{itemize}
+\end{proof}
+
+\begin{theorem}[]
+	A union of one no more than countable set of no more than countable sets is no more, than countable
+\end{theorem}
+
+\begin{note}[]
+	That means if we are given infinite последовательность of sets $A_1, A_2, \dots $, each of them is no more than countable, then a set $B = \bigcup_{i} A_i$ is also no more than countable.
+\end{note}
+
+\subsection{A union of no-more-than-countable sets}
+
+\begin{proof}[Доказательство]
+	Let $f_i: A_i \mapsto \N$ be an injection.
+	\begin{itemize}
+		\item $\forall x \in B$ let $s(x) = min \left\{ n \in \N | x \in A_{n} \right \} $
+		\item Consider a mapping $h: B \mapsto \N \times \N$, defined by a formula \[
+				h(x) = (s(x), f_{s(x)}(x)
+			\]
+	 
+		\item Obviously, $h$ is an injection.
+		\item Then, $B$ is no-more-than-countable. 
+	\end{itemize}
+\end{proof}
+\begin{note}[Will be on practice]
+	In particular, an union of any finite or countable set of countable sets is always countable.
+\end{note}
+
+
+\begin{definition}[]
+	\begin{itemize}
+		\item a real number $\alpha$ is called \textbf{algebraic}, if $\alpha$ is a root of non-zero polynomial, with $\Q$ coefficients
+		\item Else, $\alpha$ is transcendent. 
+	\end{itemize}
+\end{definition}
+
+\begin{exercise}
+	A set of all algebraic numbers is countable.
+\end{exercise}

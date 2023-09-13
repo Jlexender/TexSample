@@ -1,0 +1,315 @@
+\section{2023-09-08 -- 1}
+
+\subsection{Ring and field}
+Let $K$ be a set, we call it's elements \textit{numbers}. Two operations are also defined:
+
+\(+: K \times K \mapsto K \) 
+
+\(\cdot: K \times K \mapsto K\).
+
+Properties:
+\begin{enumerate}
+	\item (Ассоциативность +): $\forall a,b,c \in K: (a+b)+c = a + (b+c)$ 
+	\item (Commutativity +): $\forall a,b \in K: a + b = b + a$
+	\item Zero: $\exists 0 \in K: a+0=a$
+	\item (Inverse element for +): $\forall a \in K \exists (-a) \in K: a + (-a) = 0$ 
+	\item (Distributivity): $\forall a,b,c \in K: a \cdot (b \cdot c) = (a+b) \cdot c \ \& \  a \cdot (b + c) = a \cdot b + a \cdot c$
+	\item (Associativity $\cdot$): (ab)c = a(bc) 
+	\item (Commutativity $\cdot$): ab = ba 
+	\item (Neutral element $\cdot$): $\exists 1: \forall a \in K: 1 \cdot a = a$.
+	\item (Inverse element for $\cdot$): \[
+		\forall a \in K \backslash \left\{ 0 \right \} \exists (a)^{-1} \in K: a \cdot (a)^{-1} = (a)^{-1} \cdot a = 1
+	\]
+\end{enumerate}
+
+\begin{itemize}
+	\item $1 - 6 \Rightarrow K - ring$ 
+	\item $1 - 7 \Rightarrow K - commutative \ ring$  
+	\item $1 - 6 \ \& \ 8 \Rightarrow K - ring \ with \ 1$
+	\item $1 - 6, 8, 9 \Rightarrow K - body$
+	\item $1 - 9 \Rightarrow K - field$
+\end{itemize}
+
+\begin{property}[]
+	Zero is the only one.
+\end{property}
+
+\begin{proof}[Доказательство]
+	Let there be $0_1$ and $0_2$. Then: \[
+		0_1 = 0_1 + 0_2 = 0_2 + 0_1 = 0_2.
+	\]
+\end{proof}
+
+\begin{property}[]
+	$\forall a \in K$, the reverse element for $+$ is the only one. 	
+\end{property}
+\begin{proof}[Доказательство]
+	Let there be 2 reverse elements for $a \in K$: $b_1 \ \& \ b_2$. Then: \[
+		b_1 = b_1 + 0 = b_1 + (a + b_2) = (b_1 + a) + b_2 = 0 + b_2 = b_2
+	\]
+\end{proof}
+
+\begin{property}[]
+	$\forall a \in K: -(-a) = a$
+\end{property}
+
+\begin{proof}[Доказательство]
+	$a = a + ((-a) + (-(-a))) = (a + (-a)) + (-(-a)) = (-(-a))$
+\end{proof}
+
+\begin{property}[]
+	No more than 1 unit in a ring.
+\end{property}
+
+\begin{proof}[Доказательство]
+	Let there be $1_1 \ \& \ 1_2$. Then: \[
+		1_1 = 1_1 \cdot 1_2 = 1_2.
+	\]
+\end{proof}
+
+\begin{definition}[]
+	Let $K$ be a ring with 1. An element $a \in K$ is reversible, if $\exists a^{-1} \in K$
+\end{definition}
+
+$\triangleleft$ in the fiels, all elements except 0 are reversible.
+
+\begin{property}[]
+	Let $K$ be a ring with 1. Then, $\forall a \in K \exists$ no more than 1 reverse element for $\cdot $.
+\end{property}
+
+\begin{proof}[Доказательство]
+	Let there be 2 reverse elements: $b_1 \ \& \ b_2$. Then: \[
+		b_1 = b_1 \cdot 1 = b_1 \cdot (a \cdot b_2) = (b_1 \cdot a) \cdot b_2 = 1 \cdot b_2 = b_2
+	\]
+\end{proof}
+
+\begin{property}[]
+	 Let $K$ be a ring with 1. Then, $\forall$ reversible $a \in K: (a^{-1})^{-1} = a$
+\end{property}
+
+\begin{proof}[Доказательство]
+	$a = a \cdot 1 = a \cdot (a^{-1} \cdot (a^{-1})^{-1}) = (a \cdot a^{-1}) \cdot (a^{-1})^{-1} = 1 \cdot (a^{-1})^{-1} = (a^{-1})^{-1}$
+\end{proof}
+
+\begin{property}[]
+	-0 = 0
+\end{property}
+
+\begin{proof}[Доказательство]
+	Follows from the $0 + 0 = 0$.
+\end{proof}
+
+\begin{property}[]
+	If $K$ is a ring with 1, then $1^{-1} = 1$
+\end{property}
+\begin{proof}[Доказательство]
+	Follows from $1 \cdot 1 = 1$
+\end{proof}
+
+\begin{definition}[]
+	\begin{itemize}
+		\item Substraction -- addition a reverse element for $+$:  \[
+			a - b := a + (-b).
+		\]
+		\item Division on a reversible element $b$ is a multiplication by $b^{-1}$: \[
+			\frac{a}{b} := a \cdot b^{-1}.
+		\]	
+	\end{itemize}
+\end{definition}
+
+\subsection{Sub-field and sub-ring}
+
+\begin{definition}[]
+	$\\$
+	\begin{itemize}	
+		\item Let $K \subset L$ (both are rings with the same operations). Then $K$ is a \textbf{sub-ring} of $L$, and  $L$ is an \textbf{supra-ring} of $K$.
+		\item Let $K \subset L$ (both are fields with the same operations). Then $K$ is a \textbf{sub-field} of $L$; $L$ is a \textbf{supra-field} of $K$. 
+	\end{itemize}
+\end{definition}
+
+\begin{lemma} 
+	Let $L$ be a ring, $K \subset L$. Conditions:
+	\begin{enumerate}[]
+		\item Closedness of $+: \forall a,b \in K: \ \ a+b \in K$ 
+		\item Closedness of $\cdot : \forall a,b \in K \ \ a \cdot b \in K$
+		\item Existence of reverse element for $+ \\ \forall a \in K \ \ \exists -a \in K$
+		\item Existence of reverse element for $\cdot \\ \ \ \forall  a \in K, a \neq 0, \ \ \exists a^{-1} \in K$.
+	\end{enumerate}
+	Then $K$ is a field, then, it's a sub-field of $L$.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	$\\$ 
+	\begin{itemize}
+		\item By Lemma 1, $K$ -- commutative sub-ring of $L$.
+		\item It remains to check the existence of 1 in $K$.
+
+		Consider any non-zero element $a \in K$. Then $a^{-1}\in K$, and that means, that $a \cdot a ^{-1} = 1 \in K$.	
+	\end{itemize}
+\end{proof}
+
+\subsection{Homomorphism}
+
+\begin{definition}[]
+	$ \triangleleft $ Let $K, L$ be a rings. Then a relation  $f: K \mapsto L$ is called \textbf{homomorphism}, if $\forall  a,b \in K$: \[
+		f(a+b) = f(a)+f(b) \ \& \ f(ab) = f(a)f(b)
+	\]
+\end{definition}
+
+A kernel of homomorphism $f$ is denoted as $\ke{f} = \left\{ x \in K: f(x) = 0 \right \} $
+An image of homomorphism $f$ is denoted as $\im{f} = \left\{ y \in L: \exists x \in K: f(x) = y  \right \} $.
+
+\begin{property}[]
+	If $f: K \mapsto L$ is homomorphism, then $f(0_K) = 0_L$.
+\end{property}
+
+\begin{proof}[Доказательство]
+	$f(0_K) = f(0_K + 0 _{k}) = f(0_{K}) + f(0_{K)}$. Substracting from left and right side $f(0_{k})$, we get $f(0_{K}) = 0_{L}$
+\end{proof}
+
+\begin{lemma}
+	Let $K, L$ be rings, $f: K \mapsto L$ -- homomorphism of rings. Then:
+	\begin{itemize}
+		\item $\ke f$ is a sub-ring of $K$.
+		\item $\im f$ is a sub-ring of $L$.
+	\end{itemize}
+\end{lemma}
+\begin{proof}[Доказательство]
+	It's enough to check conditions from Lemma 1.
+	\begin{enumerate}
+		\item \begin{itemize}
+			\item Let $a,b \in \ke f$. Then $f(a+b)= f(a) + f(b) = 0 + 0 = 0 \Rightarrow a + b \in \ke f$.
+			\item $f(ab) = f(a)f(b) = 0 \cdot 0 = 0 \Rightarrow ab \in \ke f$.
+			\item $f(-a) = -f(a) = -0_{L} = 0_{L}$.
+		\end{itemize}
+		\item \begin{itemize}
+			\item Let $y, y' \in \im f$, and $x, x' \in K$ are such that $f(x) = y \ \& \ f(x') = y'$.
+			\item Then $y + y' = f(x) + f(x') = f(x + x') \in \im f \ \& \ y \cdot y' = f(x) \cdot f(x') \in \im f$.
+			\item $-y = -f(x) = f(-x) \in \im f$.
+		\end{itemize}
+	\end{enumerate}
+\end{proof}
+
+\subsection{Homomorphism types}
+
+\begin{itemize}
+	\item Let $f: K \mapsto L$ -- homomorphism of rings.
+	\item If $f$ is an injection, then  $f$ is \textbf{monomorphism}
+	\item If $f$ is a surjection ($\im f = L$), then  $f$ is an \bf{epimorphism}
+	\item If $f$ is a biection, then $f$ is \textbf{isomorphism}
+	\item Isomorphism = monomorphism + epimorphism.
+\end{itemize}
+
+\begin{lemma}
+	Let $f: K \mapsto L$ be a homomorphism of rings. Then $f$ is monomorphism if and only if $\ke f = \left\{ 0 \right \} $.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	$ \Rightarrow $ \begin{itemize}
+		\item If $f$ is monomorphism, then $f$ is an injection.
+		\item Let $a \in \ke f$. From $f(a) = 0 = f(0)$ implies, that $a = 0$ (because of the injection $f$).
+	\end{itemize}
+	$ \Leftarrow $ \begin{itemize}
+		\item Let $f(a) = f(b)$. Then $f(a-b) = f(a) - f(b) = 0$.
+		\item That means that $a - b \in \ke f = \left\{ 0 \right \} $, from this $a = b$. In conclusion,  $f$ is an injection, and that means $f$ is monomorphism.
+	\end{itemize}
+\end{proof}
+
+\begin{lemma}
+	Let $f : K \mapsto L$ be an isomorphism of rings. Then $f^{-1}: L \mapsto K$ is an isomorphism of rings.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	$\\$
+	\begin{itemize}
+		\item It's enough to proof that $f^{-1}$ is homomorphism (because relation that is reverse to biection is a biection).
+		\item Consider any $a,b \in L$.
+		\item Let $w = f^{-1}(a+b) - f^{-1}(a) - f^{-1}(b)$. Because of $f$ is a biection, we have: \[
+		f(w) = f(f^{-1}(a+b)) - f(f^{-1}(a)) - f(f^{-1}(b)) = a+b-a-b = 0	
+		\]
+		\item From ($f(w) = 0 = f(0)$ ) and because of $f$ is a biection, we implie that $w = 0$.
+		\item Therefore, $f^{-1}(a+b) = f^{-1}(a) + f^{-1}(b)$
+		\item Let $z = f^{-1}(ab) - f(f^{-1}(a)) \cdot f(f^{-1}(b)) = ab - ab = 0$.
+		\item From $f(z) = 0 = f(0)$ and because of $f$ is a biection, we implie that $z = 0$ 
+	\end{itemize}
+	Therefore, $f^{-1}(ab) = f^{-1}(a) \cdot f^{-1}(b)$.
+\end{proof}
+
+\subsection{Isomorphic rings}
+\begin{definition}[]
+	If $\exists f: K \mapsto L$ ($f$ -- isomorphism), then we say that  $K, L$ are isomorphic. Denotion: $K \simeq L$.
+\end{definition}
+
+\begin{theorem}[]
+	$\simeq$ is a relation of equality on the set of all rings.
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	$\\$ 
+	\begin{itemize}
+		\item Reflexivity is obvious: $\id : K \mapsto K \ (\id (x) = x \ \ \forall x \in K$) is obviously an isomorphism
+		\item Symmetry is proven in Lemma 5.
+		\item Let's prove transitivity: let $K,L,M$ be rings, $K \simeq L \ \& \ L \simeq M$.
+		\item Then there are isomorphisms $f: K \mapsto L \ \& \ g:L \mapsto M$. Let's prove that $g \cdot f : K \mapsto M$ (set up by rule $gf(a) := g(f(a))$) is also an isomorphism.
+		\item Composition of these biections is obviously a biection.
+		\item Checking that $gf$ is homomorphism of rings: \[
+			gf(a+b)=g(f(a+b)) = g(f(a) + f(b)) = g(f(a)) + g(f(b)) = gf(a) + gf(b) \]
+		\[	gf(ab) = g(f(ab)) = g(f(a) \cdot f(b)) = g(f(a)) \cdot g(f(b)) = gf(a) \cdot gf(b)
+		\]
+	\end{itemize}
+\end{proof}
+
+\section{2023-09-08 -- 2}
+
+\subsection{Complex numbers}
+
+\begin{definition}[]
+	$\\$
+	\begin{itemize}
+		\item A set of \textit{complex numbers} contains sorted pairs of real numbers: \[
+			\Cm = \left\{ \left( a,b \right) : a,b \in \R \right \} 
+		\]
+	\item Addition: $(a,b) + (a',b') := (a + a', b + b')$
+  	\item Multiplication: $(a,b) \cdot (a',b') := (aa' - bb', ab' + ba')$.
+	\end{itemize}
+\end{definition}
+
+\begin{definition}[]
+	$\\$
+	\begin{itemize}
+		\item Let $z = (a,b) \in \Cm$
+		\item A \textbf{real part} of $z$ is denoted as $\re (z) := a$.
+		\item An \textbf{imaginary parst} of $z$ is denoted as $\im (z)$ 
+		\item Complex conjugation: $\overline{z} := (a, -b)$ 
+		\item Norm of $z$ is denoted as $N(z) := a^2 + b^2$
+		\item Module of $z$ is denoted as $\left| z \right| := \sqrt{N(z)} = \sqrt{a^2 + b^2} $
+		\item Obviously, $\overline{\overline{z}} = z$.
+	\end{itemize}
+\end{definition}
+
+\begin{theorem}[]
+	$\Cm$ is a field.
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	\begin{itemize}
+		\item (1) and (2) because addition in $\Cm$ is componented, so associativity and commutativity are inherited from $\R$.
+		\item (3) Zero in $\Cm$ is 0 $ := (0, 0)$.
+		\item (4) Reverse element for $+$. For $z = (a,b)$ set $-z := (-a, -b)$.
+		\item (7) Commutativity of multiplication: \[
+			(a,b) \cdot (a',b') = (aa' - bb', ab' + ba') = (a'a - b'b, a'b + b'a) = (a', b') \cdot (a,b)
+		\]
+		\item (5) It's enough to check one distributivity (because multiplication is commutative):
+		\begin{align*}
+				(a,b) \cdot  ((c_1, d_1) + (c_2, d_2)) = (a,b) \cdot (c_1 + c_2, d_1 + d_2) = \\
+				(ac_1 + ac_2 - bd_1 - bd_2, ad_1 + ad_2 + bc_1 + bc_2) = \\
+				(ac_1 -bd_1,ad_1+bc_1)+(ac_2-bd_2,ad_2+bc_2) = (a,b) \cdot (c_1, d_1) + (a,b) \cdot (c_2,d_2)
+		\end{align*}
+	\item  
+	\end{itemize}
+\end{proof}
+
+
+\begin{note}[Незавершённый конспект]
+	Данный конспект не завершён.
+\end{note}
