@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1694583662 "main.tex" "main.pdf" "main" 1694583663
+["pdflatex"] 1694587781 "main.tex" "main.pdf" "main" 1694587782
   "/dev/null" 1694581155 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1692447470 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk" 1692901982 29452 e414104099f05496cf4fb58899125b63 ""
@@ -45,6 +45,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -296,14 +297,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692533535 4076253 38befb6d6b6e65b49c50e6f58e595c43 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1692534971 1511021 2ab84270346ecb9ca8bf75645f46aba0 ""
-  "images/logo_ltc.png" 1694162549 48607 1208b5af63c1a310728f55a4a9b885e6 ""
-  "lectures/1chapter.tex" 1694186105 11411 0793d89d5c68ee08e916973f36fc3c9d ""
-  "main.aux" 1694583663 1749 b2303ee823ee6ebdc7dfe9a8fe74a4dc "pdflatex"
-  "main.out" 1694583663 1092 6cb7da2cbcc9853742a8abe3de590a9d "pdflatex"
-  "main.tex" 1694162549 355 5f69fee02cb953c429ebbeacd2c28367 ""
-  "main.toc" 1694583663 665 31362c488fe00fd472cdee82ec9a1b53 "pdflatex"
-  "preamble/preamble.tex" 1694249352 7519 003a9098c7acbe2268c3a0c0b5fd384b ""
-  "preamble/title_page.tex" 1694162549 515 81d4842bf7604381600135f4dcd5e167 ""
+  "images/logo_ltc.png" 1694582897 48607 1208b5af63c1a310728f55a4a9b885e6 ""
+  "lectures/1chapter.tex" 1694587779 2767 5b6361588d179880922d4e0ca86112df ""
+  "main.aux" 1694587782 2286 673c9d5e367237b8f259b9619b4a919c "pdflatex"
+  "main.out" 1694587782 1833 3b61ca652ddb3048968583b004beb1a7 "pdflatex"
+  "main.tex" 1694582897 355 5f69fee02cb953c429ebbeacd2c28367 ""
+  "main.toc" 1694587782 1038 163cbe35a5c60ff6827916b58aed3aa9 "pdflatex"
+  "preamble/preamble.tex" 1694583831 7565 451f7e607471938b50edc4662a3e3dc3 ""
+  "preamble/title_page.tex" 1694583831 573 97663f7d916108fd382b2a9a682b2856 ""
   (generated)
   "main.aux"
   "main.log"

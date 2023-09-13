@@ -1,0 +1,110 @@
+\section{2023-09-13}
+
+\subsection{Intro}
+Аннотации, аннотации, аннотации!!!
+
+Примерно по тематике лекций. Найти статью, приближенную к теме лекции. Формат: А4. Плюсы и минусы аннотаций.
+
+\begin{itemize}
+	\item Lectures (2 times a week)
+	\item Labworks (2 times a week)
+	\item 
+		\begin{itemize}
+			\item Annotations
+			\item 2 tests in CDO
+			\item Exam
+			\item Bonuses for detected mistakes \& inordinary solutions 
+		\end{itemize}
+\end{itemize} 
+
+\begin{note}[]
+	Main goal is \textbf{to learn a lot of information fastly and effectively}
+\end{note}
+
+\subsection{Information theory}
+
+Classic definition:
+\begin{definition}[Probability]
+	$p(A) = \frac{m}{n}$
+\end{definition}
+
+Statistic definition:
+\begin{definition}[]
+	$p(A) = \lim_{n \to \infty} \frac{m}{n}$
+\end{definition}
+
+\begin{property}[]
+	$0 \leq p(A) \leq 1$
+\end{property}
+
+\subsection{Hartley measure}
+
+A system $S$ can be in $N$ conditions. Then, we can represent a condition using powers of 2. Because of  $P = \frac{1}{N}$, 
+
+\subsection{Shannon's measure}
+
+\[
+	i(S) = -\sum_{i = 1}^{N} p_{i} \cdot \log_2 p_{i}
+\]
+
+$N$ -- amount of system's conditions
+
+$p_i$ -- probability of $S$ in condition $i$ 
+
+\begin{example}[]
+	We have 3 jokers, 3 aces, 1 king, 1 queen, 1 jack. What's the amount of information?
+\end{example}
+
+\subsection{Why different volume on different devices?}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		 Приставки в СИ & Новые двоичные приставки  & $\Delta$\\
+		$kB = 10^{3} byte$ & $KiB = 2^{10} byte$ & $2\%$ \\
+		$MB = 1e 6$ & $MiB = 2e 20$ & $5\%$ \\
+		$ \dots $ & $ \dots $ & $ \dots $ \\
+	\end{tabular}
+\end{center}
+
+\subsection{Unary notation}
+
+The main disadvantage -- absence of zero.
+
+Let $X_{(q)} = x_{n-1}x_{n-2} \dots x_0. x_{-1}x_{-2} \dots x_{-m}$
+
+\[
+	X_{(q)} = \sum_{i = -m}^{n-1} x_i \cdot q^{i}
+\]
+
+\begin{problem}[]
+	$0,8125_{10} = \ ?_{(2)}$
+\end{problem}
+
+
+\subsection{Optimal notation}
+\begin{problem}[]
+	Robinson Cruso has found 60 stones. How many days we cane code using this 60 stones?
+\end{problem}
+
+$e$ is optimal.
+
+Optimal means best on some cryteria/option
+
+Обеспечивать, число и функциональность
+
+\subsection{Transposition to any notation}
+
+\subsection{Bergman's Notation}
+$\forall x \in \R: x = \sum_{k = -n}^{n-1} d_k \cdot z^{k}$, where $d_{k} \in \left\{ 0, 1 \right \}, z = \frac{1 + \sqrt{5}}{2} $
+
+Slide is fucked up
+
+\subsection{Zekendorf's notation}
+
+$x = \sum_{k = 1}^{n} d_{k}F_{k}$, where $d_{k} \in \left\{ 0, 1 \right \} , F_{k}$ are Fibonnacci numbers
+
+2 <<1's>> in a row is forbidden!
+
+\subsection{Factorial notation}
+
+$x = \sum_{k = 1}^{n} d_{k} k!$

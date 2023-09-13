@@ -91,6 +91,7 @@
 
 \theoremstyle{remark}
 \newtheorem*{solution}{Решение}
+\newtheorem{property}{Свойство}[subsection]
 
 %%% Оформление страницы
 \usepackage{extsizes}     % Возможность сделать 14-й шрифт
@@ -121,14 +122,14 @@
 %\renewcommand{\cftsecaftersnum}{\quad}
 
 %%% Шаблонная информация для титульного листа
-\newcommand{\CourseName}{English}
-\newcommand{\FullCourseNameFirstPart}{\so{English (notes)}}
+\newcommand{\CourseName}{Линейная алгебра}
+\newcommand{\FullCourseNameFirstPart}{\so{ЛИНЕЙНАЯ АЛГЕБРА}}
 \newcommand{\SemesterNumber}{I}
-\newcommand{\LecturerInitials}{Dina Grigoryevna Levina}
+\newcommand{\LecturerInitials}{Дмитрий Валерьевич Карпов}
 \newcommand{\CourseDate}{осень 2023}
 \newcommand{\AuthorInitials}{Александр Калиев}
 \newcommand{\VKLink}{https://vk.com/alekandrkaliev}
-\newcommand{\GithubLink}{}
+\newcommand{\GithubLink}{https://github.com/llexender/itmo-tex-lectures}
 
 %%% Колонтитулы
 \usepackage{titleps}
@@ -179,3 +180,5 @@
 	bottom = 30mm,
 	footskip = 15mm 
 }
+
+\usepackage[]{minted} 
