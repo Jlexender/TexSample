@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.20)  13 SEP 2023 08:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.20)  15 SEP 2023 13:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1326,7 +1326,7 @@ LaTeX Info: Redefining \nameref on input line 5.
 \openout6 = `main.out'.
 
  (./preamble/title_page.tex
-<images/logo_ltc.png, id=40, 616.704pt x 436.029pt>
+<images/logo_ltc.png, id=84, 616.704pt x 436.029pt>
 File: images/logo_ltc.png Graphic file (type png)
 <use images/logo_ltc.png>
 Package pdftex.def Info: images/logo_ltc.png  used on input line 16.
@@ -1433,26 +1433,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--280
 
  []
 
-[7]) [8] (./main.aux)
+[7]) (./lectures/2chapter.tex [8] [9]
+Overfull \hbox (3.32588pt too wide) in paragraph at lines 169--170
+[]\T2A/cmr/bx/n/12 Следствие. []\T2A/cmr/m/n/12 for $\OML/cmm/m/it/12 a[]; [] ; a[] \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 Z\OMS/cmsy/m/n/12 9[] \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 x[]; [] ; x[] \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 Z \OT1/cmr/m/n/12 : (\OML/cmm/m/it/12 a[]; [] ; a[]\OT1/cmr/m/n/12 ) =
+ []
+
+[10] [11] [12]
+./lectures/2chapter.tex:299: Double subscript.
+l.299 	$n = p_1^k_
+                  1 p_2^k_2 \dots p_s^k_s$
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./lectures/2chapter.tex:299: Double subscript.
+l.299 	$n = p_1^k_1 p_2^k_
+                          2 \dots p_s^k_s$
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./lectures/2chapter.tex:299: Double subscript.
+l.299 	$n = p_1^k_1 p_2^k_2 \dots p_s^k_
+                                        s$
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+) [13] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6CB7DA2CBCC9853742A8ABE3DE590A9D;1092.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 61E615594F6FDB1598D5F30B811D2C9A;2584
+(rerunfilecheck)             After:  D357F98EA376E48BEEAF7A0B7F32BC0C;2751.
  ) 
 Here is how much of TeX's memory you used:
- 34801 strings out of 479648
- 691897 string characters out of 5886115
- 1010200 words of memory out of 5000000
- 51901 multiletter control sequences out of 15000+600000
+ 34865 strings out of 479648
+ 692796 string characters out of 5886115
+ 1011248 words of memory out of 5000000
+ 51917 multiletter control sequences out of 15000+600000
  483075 words of font info for 62 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 89i,8n,88p,483b,591s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lati1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (9 pages, 218306 bytes).
+ 89i,8n,88p,483b,605s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lati1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (14 pages, 279998 bytes).
 PDF statistics:
- 493 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 500000)
- 102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 673 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
