@@ -1,0 +1,106 @@
+\section{2023-09-15}
+
+\subsection{Expanding $\R$}
+
+\begin{definition}[$\overline{\R}$]
+	$\overline{\R} = \R \cup \left\{ +\infty, -\infty \right \} $.
+\end{definition}
+
+\begin{property}[]
+	$\forall x \in \R$:
+	\begin{itemize}
+		\item $x + (+\infty) = +\infty := x + \infty$
+		\item $x + (-\infty) = -\infty := x - \infty$
+		\item $x \cdot (\pm \infty) = \begin{cases}
+			\pm \infty, &\text{ if } x > 0\\
+			\mp \infty, &\text{ if } x < 0\\
+			undefined , &\text{ if } x  = 0\\
+			\end{cases}$ 
+		\item $\frac{x}{\pm \infty} = 0$  
+		\item $\frac{\pm \infty}{x} = \begin{cases}
+			\pm \infty, &\text{ if } x > 0\\
+			\mp \infty, &\text{ if } x < 0\\
+		\end{cases}$ 
+	\end{itemize}
+	
+	\noindent
+	$(+\infty) + (+\infty) = +\infty \\ (-\infty) + (-\infty) = -\infty \\ (+\infty) \cdot (+\infty) = (-\infty) \cdot (-\infty) = +\infty \\ (+\infty) \cdot (-\infty) = (-\infty) \cdot (+\infty) = -\infty$
+
+	$\forall x: -\infty < x < +\infty$
+
+	Actions undefined in $\R$:
+	\begin{itemize}
+		\item $0 \cdot (\pm \infty)$
+		\item $(+\infty) + (-\infty)$
+		\item $1^{\infty}$ 
+		\item $\frac{\pm \infty}{\pm \infty}$ 
+		\item $\frac{0}{0}$ 
+		\item  $0^{0}$
+	\end{itemize}
+\end{property}
+
+\subsection{Defining $\N$}
+
+\begin{definition}[Inductive set]
+	A set $X \subset \R$ is \textit{inductive}, if $\forall x \in X: x + 1 \in X$
+\end{definition}
+
+\begin{lemma}
+	Let $X_1, X_2, \dots , X_n$ be inductive sets. Then, $X_1 \cap X_2 \cap \dots X_n$ is also inductive.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	Trivially proof the $x \mapsto x+1$
+\end{proof}
+\begin{definition}[]
+	$\N$ is an intersection of every inductive sets: $\forall i: 1 \in A_i$
+\end{definition}
+\begin{note}[]
+	$\N$ is minimal inductive set, that contains 1.
+\end{note}
+
+\begin{theorem}[Math. induction principle]
+	Let $X \subset \N, 1 \in X, X$ is inductive. Then, $\N = X$
+\end{theorem}
+
+\begin{exercise}
+	Proof that $\forall n > -1, n \in \N, x \in \R: (1 + x)^{n} \geq 1 + nx$
+\end{exercise}
+
+\subsection{Properties of $n \in \N$}
+
+\begin{lemma}
+	$\forall a,b \in \N: a + b \in \N, ab \in \N$
+\end{lemma}
+
+\begin{note}[]
+	Proof using math. induction.
+\end{note}
+
+\begin{definition}[$\Z$]
+	$\Z := \N  \cup \left\{ 0 \right \} \cup \{x : -x \in \N\}$
+\end{definition}
+
+\begin{definition}[$\Q$]
+	$\Q := \left\{ \frac{m}{n} := m \cdot n^{-1}, m \in \Z, n \in \N \right \} $	
+\end{definition}
+
+\begin{theorem}[Existence of irrational number]
+	A set $\R \ \backslash \ \Q = \mathbb{I}$ is not empty.
+\end{theorem}
+
+Let's proof that $\sqrt{2}$ is irrational.
+\begin{proof}[Доказательство]
+	Plan:
+	\begin{enumerate}
+		\item Prove that $\exists c \in \R: c^2=2$.
+		\item  Prove that $c$ is irrational.
+	\end{enumerate}	
+	\begin{enumerate}
+		\item [2. ] Let $c = \frac{m}{n}, m \in \Z, n \in \N$. Then $c^2 \cdot n^2 = m^2 \Rightarrow 2n^2 = m^2 !?$
+		\item [1. ] Using axiom of continuity. Let $X = \left\{ x \in \R_{x > 0}: x^{2} < 2 \right \} , Y = \left\{ y \in \R_{y > 0}: y^2>2 \right \} $. Then $x \leq y \Rightarrow \exists c \in \R: x \leq c \leq y \forall x \in X, y \in Y$ 
+			
+	Proving that $c \notin X$. Let  $c \in X$, i.e. $c^2 < 2$. Consider $c + \frac{2 - c^2}{3c} = c + \frac{\Delta}{3c} = \xi \\ (c + \frac{\Delta}{3c})^2 = c^2 + \frac{2}{3}\Delta + \frac{\Delta \cdot \Delta}{9c^2} \leq c^2 + (\frac{2}{3} + \frac{1}{3})\Delta = 2 \Rightarrow \xi \in X, \text{ but } \xi > c !? \Rightarrow c \notin X$. Similarly, we proof for $Y$.
+	\end{enumerate}
+	$ \Rightarrow \exists c \in \R: c^2 = 2 \Rightarrow |\mathbb{I}| \neq 0$
+\end{proof}
