@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.20)  25 SEP 2023 18:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.20)  20 SEP 2023 12:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1326,7 +1326,7 @@ LaTeX Info: Redefining \nameref on input line 5.
 \openout6 = `main.out'.
 
  (./preamble/title_page.tex
-<images/logo_ltc.png, id=56, 616.704pt x 436.029pt>
+<images/logo_ltc.png, id=12, 616.704pt x 436.029pt>
 File: images/logo_ltc.png Graphic file (type png)
 <use images/logo_ltc.png>
 Package pdftex.def Info: images/logo_ltc.png  used on input line 16.
@@ -1398,83 +1398,40 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.14     \newpage
-                  [1] (./lectures/5chapter.tex
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
+                  [1] (./lectures/1chapter.tex
+<images/pic1.pdf, id=36, 281.7392pt x 229.95213pt>
+File: images/pic1.pdf Graphic file (type pdf)
+<use images/pic1.pdf>
+Package pdftex.def Info: images/pic1.pdf  used on input line 6.
+(pdftex.def)             Requested size: 281.7385pt x 229.95155pt.
+<images/pic2.pdf, id=37, 281.7392pt x 207.41151pt>
+File: images/pic2.pdf Graphic file (type pdf)
+<use images/pic2.pdf>
+Package pdftex.def Info: images/pic2.pdf  used on input line 10.
+(pdftex.def)             Requested size: 281.7385pt x 207.411pt.
+) [2 <./images/pic1.pdf> <./images/pic2.pdf
 
- []
-
-
-Overfull \hbox (25.19186pt too wide) in paragraph at lines 38--39
-\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 a[]b[] \OT1/cmr/m/n/12 + [] + (\OML/cmm/m/it/12 C[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 a[]b[]\OT1/cmr/m/n/12 ) + [] + (\OML/cmm/m/it/12 C[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 a[]b[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 C[] \OT1/cmr/m/n/12 = [][] \OML/cmm/m/it/12 C[]a[]b[]$ 
- []
-
-LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <14.4> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
-LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
-LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <7> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
-LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
-LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
-LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 42.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 42.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 42.
-
-LaTeX Font Info:    Font shape `OML/cmr/m/up' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 45.
-LaTeX Font Info:    Font shape `OMS/cmr/m/up' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
-[2]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 96.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 96.
-
-[3]) (./lectures/6chapter.tex [4] [5]) (./lectures/7chapter.tex [6pdfTeX warning (ext4): destination with the same identifier (name{definition.3.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.42 \end{lemma}
-                ]
-./lectures/7chapter.tex:88: Undefined control sequence.
-l.88 ...\R$: infinite number of numbers of $\Q, \I
-                                                  $
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-) [7] (./main.aux)
+pdfTeX warning: pdflatex (file ./images/pic2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0C27E95D30197B9256A0C75F62448104;1682.
+(rerunfilecheck)             Checksum: F1FD94E1ED4392C6821353CBD2733DC5;93.
  ) 
 Here is how much of TeX's memory you used:
- 34914 strings out of 479648
- 693574 string characters out of 5886115
- 1017282 words of memory out of 5000000
- 51953 multiletter control sequences out of 15000+600000
- 493081 words of font info for 89 fonts, out of 8000000 for 9000
+ 34752 strings out of 479648
+ 691503 string characters out of 5886115
+ 999234 words of memory out of 5000000
+ 51901 multiletter control sequences out of 15000+600000
+ 481451 words of font info for 60 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 89i,11n,88p,583b,576s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labi1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lati1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (8 pages, 267830 bytes).
+ 89i,7n,88p,483b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lati1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/alex/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk>
+Output written on main.pdf (3 pages, 90375 bytes).
 PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

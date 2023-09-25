@@ -1,0 +1,89 @@
+\section{2023-09-25}
+
+\subsection{Borrel-Lebeg lemma}
+
+Consider $G_\alpha$ as a sets.
+
+$G_\alpha$ is forming a cover of a set $X$ if $X \subset \bigcup_{\alpha} G_\alpha$
+
+\begin{lemma}[Borrel-Lebeg lemma (GBL lemma)]
+	From any coverage of a segment by interval we can choose a finite one.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	Consider $\left[ a_0,b_0 \right]$. Let there be no option to choose a finite coverage from $\bigcup_{\alpha} G_\alpha$. Split the segment by half and we get $\left[ a_1, b_1 \right]$ - a cover where we cant choose a finite covering. $ \dots \left[a_2, b_2 \right] \subset \left[ a_1,b_1 \right] \subset \left[ a_0, b_0 \right]. b_n - a_n = \frac{b_0-a_0}{2^{n}} \underset{2^{n} > n} < \frac{b_0-a_0}{n} < \frac{1}{\epsilon} \Rightarrow \forall \epsilon > 0 \exists n \Rightarrow \exists ! c: c \in \left[ a_i, b_i \right]$
+
+	$\exists G = \left( k,l \right): c \in G \Rightarrow \exists n_0: \left[ a_{n_0}, b_{n_0} \right] \subset \left( k,l \right) !? $
+	\begin{note}[]
+		Basically proving Canthor's theorem and getting !? for this.
+	\end{note}
+\end{proof}
+
+\begin{lemma}[limit point]
+	\begin{definition}[]
+		A dot $x_0$ is called \textbf{limited} point of this set $E$ if $\forall \overset{\circ} U (x_0) \cap E \neq \emptyset$, i.e. $U(x_0) \cap E$ is infinite.
+
+		\begin{example}[]
+			Consider $\left[ 0, 1 \right)$
+			A set of limit points $E' = \left[ 0,1 \right]$
+		\end{example}
+
+		\begin{example}[]
+			Consider $E = \left\{ \frac{1}{n}, n \in \N \right \} $
+			$E' = \left\{ 0 \right \} $
+		\end{example}
+		
+		\begin{definition}[]
+			If $x_0 \in E \ \& \ x_0$ is not a limit point, then $x_0$ is \textbf{isolated} point of $E$, i.e. $\exists U(x_0): \overset{\circ} U (x_0) \cap E = \emptyset$.
+		\end{definition}
+	\end{definition}
+
+	(Lemma) Let $E$ is an infinite and bounded $E \subset \R$. Then $\exists x_0: x_0$ is limit point of $E$.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	$E$ is bounded $ \Rightarrow \exists \left[ a,b \right]: E \subset \left[ a,b \right]$. Let there be no limit points in $\left[ a,b \right]$, i.e. $\forall x \in \left[ a,b \right] \text{ is not limit point for $E$ }$, i.e. there is a finite number of points in $E \in U(x)$
+
+	$\left\{ U(x) \right \} \text{ is cover of a segment by intervals } \underset{BGL \ lemma}{ \Rightarrow } \exists \left\{ U(x_1), \dots , U(x_n) \right \}   $
+
+	$E \subset \bigcup_{i=1} ^ n U(x_i), \text{ but a subset contains a finite number of points from $E$ !? } $
+\end{proof}
+
+
+\begin{note}[]
+	We can select limit points in $\overline{\R}$ 
+
+	e.g. $\N' = \left\{ +\infty \right \} $
+\end{note}
+
+\subsection{closedness of sets}
+
+\begin{definition}[]
+	A set $E$ is close d (in $\R$ ) if it contains every it's limit point, i.e. $E' \subset E$.
+
+	An $\emptyset$ is closed \textit{by definition}.
+\end{definition}
+
+\begin{example}[]
+	$E = \left[ 0, 1 \right) \text{ isn't closed } $ 
+
+	$\left[ 0,1 \right] \text{ is closed } $ 
+
+	$E = \left\{ \frac{1}{n}, n \in \N \right \} \cup \left\{ 0 \right \} \text{ is closed } $.
+\end{example}
+
+\begin{lemma}
+	Let $E \subset \R$, $E \text{ is closed and bounded above (below). Then }  \exists \max E (\min E)$
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	By exact bound principle $\exists M = \sup E \in \R$. Proving that $M \in E$. Let $M \notin E$. Then, we consider any neighbourhood $\left( \alpha, \beta \right) \ni M$. For $\epsilon_1 = M - \alpha > 0: \exists x_1 \in E \cap \left( \alpha, M \right)  $. For $\epsilon_2 = M - x_1$, for $\epsilon_3 = M - x_2, \dots  \Rightarrow $ there is infinite amount of dots in $E$, i.e. $M$ is a limit point of $E \Rightarrow M \in E$ 
+\end{proof}
+
+\begin{corollary}[]
+	Any finite set has it's maximum and minimum. (it has no limit points).
+\end{corollary}
+
+\begin{corollary}[]
+	For any $\left( \alpha, \beta \right) \subset \R$: infinite number of numbers of $\Q, \I$
+\end{corollary}

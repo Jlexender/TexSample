@@ -1,0 +1,123 @@
+\section{2023-09-22}
+
+\subsection{}
+
+Let $X \subset \R$
+
+\begin{note}[]
+	If $X$ is not bounded, then $\sup X = +\infty \ \& \ \inf X = -\infty$. Let $i = [0; 1)$. We will proof that there is a supremum of $i$.
+\end{note}
+
+\begin{lemma}
+	If $\exists \max X$, then $\sup X = \max X$.
+
+	If $\exists \min X$, then $\inf X = \min X$.
+	
+	\textbf{Implication only!}
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	\begin{itemize}
+		\item Obviously, let $M = \max X$. Then $M$ is upper bound by definition of $\max$. Let there be $M' < M$ such that $M'$ is an upper bound. Then it's not an upper bound by definition.
+		\item Same story for $\min X$ 
+	\end{itemize}
+\end{proof}
+
+\begin{lemma}[different definition of supremum and infremum]
+	$M = \sup X \Leftrightarrow M: \forall x \in X: x \leq M \ \& \ \forall \epsilon > 0 \exists x \in X: x > M - \epsilon$
+
+	$m = \inf X \Leftrightarrow m: \forall x \in X: x \geq m \ \& \ \forall \epsilon > 0 \exists x \in X: x > m + \epsilon$
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	By definition.
+\end{proof}
+
+\begin{theorem}[Exact bound principle]
+	$\forall X: X$ is upper bounded $ \Rightarrow \exists \sup X$. Same for $\forall X: X$ is lower bounded $ \Rightarrow \exists \inf X$
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	If the set is upper bounded, then $\exists $ an upper bound. Let $B$ be a set of upper bounds: $B = \left\{ M \in \R: x \leq M, x \in X \right \} $. Then $\forall M, x: x \leq M$. By continuity axiom, $\exists c \in \R: x \leq c \leq M \forall x \in X, M \in B$. Let's proof that $c$ is a supremum of $X$.  $c$ is an upper bound of $X$ and it's lower that every other upper bounds in  $M$. Then, $c = \sup X$
+\end{proof}
+
+\begin{note}[]
+	Even if $X$ is not upper bounded. Then $\forall X \neq \emptyset \exists c \in \overline{\R}: c = \sup X$
+\end{note}
+
+\subsection{Archimed's axiom}
+
+\begin{lemma}
+	Let $X \subset  \N, X \neq \emptyset, X$ is bounded. Then, the maximum exists.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	$\exists M = \sup X = k \in \R$ for $\epsilon = 1$. Then  $\exists x \in X: k-1 < x \leq k$. Then $x \in \N$. Proving that $x = k$. $k < x + 1$ then  $\forall y \in X: y \leq x$, because of $y \leq k < x+1 \Rightarrow y < x+1 \Rightarrow y \leq x \Rightarrow x = \max X$.
+\end{proof}
+
+\begin{corollary}[]
+	\begin{enumerate}
+		\item $\N$ is not bounded above.
+		\item $\Z$ is bounded nor below and above. 
+		\item $X \subset \Z$ if  $X$ is bounded below then $\exists \min X$; if $X$ is bounded above the $\exists \max X$  
+	\end{enumerate}
+\end{corollary}
+
+\begin{theorem}[Archimed's axiom]
+	Let $x \in R, x > 0$. Then $\forall y \in \R \exists k \in \Z: (k-1)x \leq y \leq kx$. 
+
+	Interpretation: we can fill a segment of length $y$ with a segments of length $x$.
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Consider $T = \left\{ t \in \Z: \frac{y}{x} \leq t \right \} $. $T \neq \emptyset \ \& \ $ is bounded below. Then $\exists k = \min T: \frac{y}{x} < k \Rightarrow y < kx \Rightarrow k-1 \leq \frac{y}{x}$, cuz if it's false then $k-1 \in T$ but $k-1 < k = \min T!?$
+\end{proof}
+
+\begin{corollary}[]
+	\begin{enumerate}
+		\item $\forall \epsilon > 0 \exists n \in \N: 0 < \frac{1}{n} < \epsilon$
+			\begin{proof}[Доказательство]
+				$y = 1, x = \epsilon \Rightarrow \exists n: 1 < n\epsilon$
+			\end{proof}
+		\item If $x \geq  0$ and $\forall \epsilon > 0 x < \epsilon \Rightarrow x = 0$ 
+			\begin{proof}[Доказательство]
+				$0 \leq x < \epsilon$. Let there be $x > 0 \Rightarrow \epsilon = \frac{x}{2}$ the statement is \textit{false}.
+			\end{proof}
+		\item $\forall x \in \R \exists ! k = [x] \in \Z: k \leq x < k+1$ 
+			\begin{proof}[Доказательство]
+				$x = 1, \epsilon = x$
+			\end{proof}
+	\end{enumerate}
+\end{corollary}
+
+\begin{lemma}[density of $\Q$ and $\mathbb{I}$ in $\R$]
+	Let there be $a < b$. Then on $(a, b) \exists q \in \Q, j \in \mathbb{I}$ 
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	$\exists n \in \N: \frac{1}{n} < b-a, [na] \leq na < [na] + 1 \Rightarrow a < \frac{[na] + 1}{n} = q \leq \frac{n a + 1}{n} < b$
+
+	$\sqrt{2} \in \mathbb{I}$. Consider $q \in (a - \sqrt{2}, b - \sqrt{2})$. Then, $q + \sqrt{2} \in (a, b)$. Из-за замкнутости $q  +\sqrt{2} \in \mathbb{I}$. Let $q + \sqrt{2} \in \Q$. Then, $q + \sqrt{2} - q = \sqrt{2} \in \Q !?$
+\end{proof}
+
+\subsection{Canthor's theorem about line segments}
+
+Let $I_n = \left[ a_n, b_n \right], a_n \leq b_n$
+ 
+We assume that $\dots \subset I_n \subset I_{n-1} \subset \dots \subset I_2 \subset I_1$
+
+\begin{theorem}[]
+	If there is this system of line segments, then: 
+	\begin{itemize}
+		\item $\bigcap_{n=1} ^\infty I_n \neq \emptyset (i.e. \ \exists c \in \bigcap_{} I_{n} $
+		\item If $\forall \epsilon > 0 \exists I_n: b_n - a_n < \epsilon$, then $\bigcap_{} I_n = \left\{ c \right \}  $, i.e. $\exists ! c$ 
+	\end{itemize}
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	\begin{itemize}
+		\item $A = \left\{ a_n \right \}, B = \left\{ b_n \right \}, a_n \leq b_m \Rightarrow _ \text{continuity A.} \exists c: a_n \leq c \leq b_n \Rightarrow c \in I_n \forall n \in \N  $ 
+		\item Let $c_1, c_2 \in I_n \ \forall n$. Let $c_1 < c_2 \Rightarrow \text{ for } \epsilon = c_2 - c_1 \exists (a_n b_n): b_n - a_n < \epsilon !?$ 
+	\end{itemize}
+\end{proof}
+

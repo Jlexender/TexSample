@@ -1,0 +1,68 @@
+\section{2023-09-19}
+
+\begin{itemize}
+		\item Let $G$ be a graph.
+		\item $G = \left( V(G), E(G) \right)$, where $V(G)$ are graphs vertices, $E(G)$ -- graph's edges
+		\item We consider only finite graphs.
+		\item $v(G)$ is amount of vertices, $e(G)$ -- amount of edges. 
+		\item Graph is considered to be not oriented, if not mentioned
+		\item $e$ is a \textbf{loop}, if beginning and end of  $e$ are the same
+		\item Edges $e, e'$ are кратные, if 
+		\item $e=xy$ means, that $x,y$ are ends of $e$.
+		\item if multiple edges are allowed 
+\end{itemize}
+
+\subsection{Neighbourhood of $v$}
+
+\begin{definition}[]
+	$\forall v \in V(G)$ we denote $N_G(v)$ as Neighbourhood of $v$ -- a set of every vertice of $G$, that are commutated with $v$.
+\end{definition}
+\begin{definition}[]
+	$d_G(x)$ -- degree of $x$ in graph $G$.
+\end{definition}
+
+\begin{definition}[]
+	$H$ is a subgraph, if $V(H) \subset V(G) \ \& \ E(H) \subset E(G)$.
+
+	Остовный подграф: $V(H) = V(G)$
+
+	Let  $U \subset V(G)$. We denote $G(U)$ as inducated subgraph on a set of vertices $U$. $V(G(U)) = U, \text{ and } E(G(U))$ consists of a set of vertices of $G$.
+\end{definition}
+
+\begin{definition}[]
+	Let $G_1, G_2$ be 2 graphs. Then $G_1 \cup G_2 = V(G_1) \cup V(G_2) \ \& \ E(G_1) \cup E(G_2)$.
+\end{definition}
+
+\begin{definition}[removing an edge]
+	$G-R$ is a graph that we get by removing every edge from $R$ out of $G$.	
+\end{definition}
+
+\subsection{Стягивание ребра}
+
+\subsection{A route}
+
+\begin{definition}[]
+	\begin{enumerate}
+		\item A subsequence of vertices, where $e = a_ia_{i+1}$ is called \textbf{a route}.
+		\item We say that a route goes to edges $e_1, \dots, e_{n-1}$ 
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}[path]
+	A route, but every edge is going less or equal than one time 
+	\begin{itemize}
+		\item A length of $P$ is an amount of it's edges
+		\item $Int P$ is a set of edges, that differ from beginning and from the end of this $P$. 
+	\end{itemize}
+\end{definition}
+\begin{note}[]
+	We will call it a subgraph and also a subsequence of vertices. That will not bother us
+\end{note}
+
+\begin{definition}[]
+	\begin{enumerate}
+		\item Let $x,y \in V(G)$. Then it's an $xy$-path.
+		\item Let $X,Y \subset V(G)$. We call an $XY$-path any simple path at the beginning and end at $X,Y$ if внутренние вершины не принадлежат  $X,Y$. 
+		\item $dist_G(x,y)$ 
+	\end{enumerate}
+\end{definition}

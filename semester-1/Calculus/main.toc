@@ -1,19 +1,13 @@
 \babel@toc {russian}{}\relax 
-\contentsline {section}{\numberline {1}2023-09-04}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Intro}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Logical symbolic}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Sets}{3}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Operations between sets}{3}{subsection.1.4}%
-\contentsline {section}{\numberline {2}2023-09-10 (NAL)}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}De Morgan laws}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Distribution laws}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Injection, surjection and biection}{6}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Properties of images and prototypes}{6}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Superposition of mapping}{7}{subsection.2.5}%
-\contentsline {section}{\numberline {3}2023-09-11}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Defining $\mathbb {R}$}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Corrolaries}{8}{subsection.3.2}%
-\contentsline {section}{\numberline {4}2023-09-15}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Expanding $\mathbb {R}$}{10}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Defining $\mathbb {N}$}{10}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Properties of $n \in \mathbb {N}$}{11}{subsection.4.3}%
+\contentsline {section}{\numberline {1}2023-09-18}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Бином Ньютона}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Defining intervals on $\mathbb {R}$}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Absolute value}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Bounds of the set in $\mathbb {R}$}{3}{subsection.1.4}%
+\contentsline {section}{\numberline {2}2023-09-22}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Archimed's axiom}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Canthor's theorem about line segments}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}2023-09-25}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Borrel-Lebeg lemma}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}closedness of sets}{7}{subsection.3.2}%
