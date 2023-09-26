@@ -122,10 +122,10 @@
 %\renewcommand{\cftsecaftersnum}{\quad}
 
 %%% Шаблонная информация для титульного листа
-\newcommand{\CourseName}{Линейная алгебра}
-\newcommand{\FullCourseNameFirstPart}{\so{ЛИНЕЙНАЯ АЛГЕБРА}}
+\newcommand{\CourseName}{Математический анализ}
+\newcommand{\FullCourseNameFirstPart}{\so{МАТЕМАТИЧЕСКИЙ АНАЛИЗ}}
 \newcommand{\SemesterNumber}{I}
-\newcommand{\LecturerInitials}{Дмитрий Валерьевич Карпов}
+\newcommand{\LecturerInitials}{Екатерина Станиславовна Трифанова}
 \newcommand{\CourseDate}{осень 2023}
 \newcommand{\AuthorInitials}{Александр Калиев}
 \newcommand{\VKLink}{https://vk.com/alekandrkaliev}
@@ -181,4 +181,16 @@
 	footskip = 15mm 
 }
 
+% Для кода
 \usepackage[]{minted} 
+
+% Inkscape setup
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
