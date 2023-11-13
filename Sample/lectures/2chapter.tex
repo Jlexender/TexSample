@@ -1,0 +1,123 @@
+\section{2023-09-10 (NAL)}
+
+(not a lecture)
+
+\subsection{De Morgan laws}
+
+\begin{proposition}[De Morgan laws]
+	\[
+		A \ \backslash \bigcup_{i \in I} X_{i} = \bigcap_{i \in  I} (A \ \backslash X_{i}) 
+	\]
+	\[
+		A \ \backslash \bigcap_{i \in I} X_{i} = \bigcup_{i \in  I} (A \ \backslash X_{i}) 
+	\]
+\end{proposition}
+
+\begin{proof}[Доказательство]
+	Let's proof the first formula. Using the definition: 
+	\begin{align*}
+		A \ \backslash \bigcup_{i \in I} X_{\alpha} &= A \ \backslash \  \left\{x \in U: \exists i \in I : x \in X_{i}  \right \}  \\
+		&= \left\{ x : x \in A \ \& \ \forall i \in I : x \notin X_{i} \right \}  \\	
+		&= \left\{ x : \forall i \in I: x \in A \ \& \ x \notin X_{i} \right \}  \\
+		&= \bigcap_{i \in I} \left( A \ \backslash \  X_{i} \right)   \\
+	\end{align*}
+
+	Similarly, proving the second formula, but with a little bit different approach:
+	\begin{align*}
+		A \ \backslash \  \bigcap_{i \in  I} X_{i} = A \ \backslash \  \left\{ x \in U: X_1 \cap X_2 \cap \dots \cap X_n \right \} \\
+		= \left\{ x \in U: x \in A \wedge x \notin (X_1 \cap X_2 \cap \dots \cap X_n) \right \} \\
+		= \left\{  \right \} 
+	\end{align*}
+	It's enough for $x$ to not be in any of $X_i$ (this statement is trivial). Then, the set is: $\left\{ x \in U: \exists i \in I: x \in A \wedge x \notin X_i \right \} $  
+
+	This is equal to: \[
+		\bigcup_{i \in  I} \left( A \ \backslash \  X_{i} \right) 
+	\]
+\end{proof}
+
+\subsection{Distribution laws}
+
+\begin{proposition}[Distribution]
+	\[
+		Y \cap \bigcup_{i \in I} X_{i} = \bigcup_{i \in  I} \left( Y \cap X_i \right)  
+	\] \[
+		Y \cup \bigcap_{i \in  I} X_i = \bigcap_{i \in  I} \left( Y \cup X_i \right) 
+	\]	
+\end{proposition}
+
+
+\begin{proof}[Доказательство]
+	Proving the first law: 
+	\begin{align*}
+		Y \cap \bigcup_{i \in I} X_{i} &= \left\{x \in U: x \in Y \wedge x \in (X_1 \cup X_2 \cup \dots \cup X_N)  \right \} \\
+		&= \left\{ x \in U: x \in Y \wedge \exists i \in I: x \in X_i \right \} \\
+		&= \left\{ x \in U: \exists i \in I: x \in Y \cap X_i \right \}  \\
+		&= \bigcup_{i \in  I} \left( Y \cap X_i \right)   \\
+	\end{align*}
+	Similarly, proving the second law:
+	\begin{align*}
+		Y \cup \bigcap_{i \in  I} X_i &= \bigcap_{i \in  I} \left( Y \cup X_i \right) \\
+		&= \left\{ x \in U: x \in Y \vee \forall i \in I: x \in X_i \right \} \\
+		&= \left\{ x \in U: \forall i \in I: x \in \left( Y \cup X_i \right)  \right \}  \\	
+		&= \bigcap_{i \in  I} \left( Y \cup X_i \right)  
+	\end{align*}
+\end{proof}
+
+\subsection{Injection, surjection and biection}
+
+\begin{definition}[mapping]
+	A mapping is a rule $f: \forall x \in X \exists! y \in Y: f(x) = y$.
+\end{definition}
+
+\begin{definition}[injection]
+	A mapping $f: X \mapsto Y$ is called \textbf{an injection}, if $\forall x_1, x_2 \in X: x_1 \neq x_2 \wedge f(x_1) \neq f(x_2)$
+\end{definition}
+
+\begin{definition}[surjection]
+	A mapping $f: X \mapsto Y$ is called \textbf{a surjection}, if $\forall y \in Y: \exists x \in X: f(x) = y$
+\end{definition}
+
+\begin{definition}[biection]
+	We call $f$ a biection if $f$ is both an injection and a surjection.
+\end{definition}
+
+\subsection{Properties of images and prototypes}
+
+We define $A,B \in X, \ \ A', B' \in Y$.
+
+\begin{definition}[an image]
+	$f^{-1}(Y) = \left\{ x \in X : f(x) \in Y \right \} $
+\end{definition}
+
+\begin{enumerate}
+	\item $A \subset B \Rightarrow f(A) \subset f(B)$. It's obvious.
+	\item $f(A \cup B) = f(A) \cup f(B)$.
+	\begin{proof}[Доказательство]
+		Let $y \in f(A \cup B) \Rightarrow \exists x \in A \cup B: f(x) = y \Rightarrow x \in A \vee x \in B \Rightarrow f(x) \in f(A) \vee f(x) \in f(B) \Rightarrow f(x) \in f(A) \cup f(B)$.
+	\end{proof}
+	\item $f(A \cap B) = f(A) \cap f(B)$.
+	\begin{proof}[Доказательство]
+		Let $y \in f(A \cap B) \Rightarrow \exists x \in A \cap B: f(x) = y \Rightarrow f(x) \in f(A) \wedge f(x) \in f(B) \Rightarrow y \in A \wedge y \in B \Rightarrow f(x) \in A \wedge f(x) \in B \Rightarrow f(A \cap B) = f(A) \cap f(B) $
+	\end{proof}
+	\item $A' \subset B' \Rightarrow f^{-1}(A') \subset f^{-1}(B')$. Obviously, true.
+	\item $f^{-1}(A' \cup B') = f^{-1}(A') \cup f^{-1}(B').$
+	\begin{proof}[Доказательство]
+		Let $x \in f^{-1}(A' \cup B') \Rightarrow y \in A' \vee y \in B' \Rightarrow x \in f^{-1}(A') \vee x \in f^{-1}(B') \Rightarrow f^{-1}(A' \cup B') \in f^{-1}(A) \cup f^{-1}(B)$
+	\end{proof}
+	\item $f^{-1}(A' \cap B') = f^{-1}(A') \cap f^{-1}(B')$
+\end{enumerate}
+
+Let $f: X \mapsto Y$ be a biection. Then:
+\begin{definition}[reverse map]
+	$f^{-1}: Y \mapsto X$ is called \textbf{reverse map} if $\forall y \in Y \exists ! x \in X: f^{-1}(y) = x$
+\end{definition}
+\subsection{Superposition of mapping}
+
+\begin{theorem}[associativity]
+	$f \circ (g \circ h) = (f \circ g) \circ h$
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Left side: $f \circ g(h) = f(g(h))$.
+	Right side: $f(g) \circ h = f(g(h))$
+\end{proof}

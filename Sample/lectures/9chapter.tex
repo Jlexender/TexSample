@@ -1,0 +1,87 @@
+\section{2023-10-02}
+
+\subsection{Subsequence limit}
+
+\begin{definition}[]
+	Sequence if a function of $n \in \N$
+	
+	Denotion: $a_{n}: a_1, a_2, \dots $
+\end{definition}
+
+\begin{definition}[Cauchy's limit definition]
+	$A = \lim_{n \to \infty} a_n$ is called a limit, if $\\\forall \epsilon > 0 \exists n_0(\epsilon) \in \N: \forall n \in \N, n \geq n_0: \left| a_n - A \right|  <\epsilon \Leftrightarrow a_n \in U_\epsilon (A)$.
+\end{definition}
+
+\begin{example}[]
+	$\lim_{n \to \infty} \frac{n-1}{n+1} = 1.$
+
+	Consider $\left| \frac{n-1}{n+1} - 1 \right| = \frac{2}{n+1} < \frac{2}{n} < \epsilon. \ n_0 = \left\lfloor \frac{2}{\epsilon} + 1 \right\rfloor$
+\end{example}
+
+\subsection{Отрицание определения}
+
+\begin{definition}[]
+	$A \neq \lim_{n \to \infty} a_n \Leftrightarrow \exists \epsilon > 0: \forall n_0 \in \N \exists n: n \geq n_0 \ \& \ \left| a_n - A \right| \geq \epsilon$
+\end{definition}
+
+\begin{example}[]
+	$a_n = (-1)^{n}$ has no limit.
+\end{example}
+\begin{proof}[Доказательство]
+	Let it be true. Then $\exists A: \lim_{} (-1)^{n} = A$. Let $\epsilon = 0.5$.  
+
+	дальнейшее доказательство тривиально, если честно.
+\end{proof}
+
+\subsection{Different definition}
+
+\begin{definition}[Limit definition using neighbourhoods]
+	$A = \lim_{n \to \infty} a_n \overset{def} \Leftrightarrow \forall U(A) \exists n_0 \in \N: \forall n \geq n_0 \Rightarrow a_n \in U(A)$	
+\end{definition}
+
+\begin{lemma}
+	Definitions are equal.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	\begin{enumerate}
+		\item Top. $ \Rightarrow $ Cauchy definition.
+		\item Consider any $U(A) = \left( \alpha, \beta \right) \ni A$ . WE TAKE $\min (A - \alpha, \beta - A)$ -- epsilon-neighbourhood $ \Rightarrow $ proven by Cauchy.
+	\end{enumerate}
+\end{proof}
+
+\begin{definition}[Infinite limits]
+	$\lim_{n \to \infty} a_n = +\infty \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \N: \forall n \geq n_0: a_n > \frac{1}{\epsilon} = U_\epsilon (+\infty)$
+\end{definition}
+
+
+\begin{definition}[]
+	$\lim_{n \to \infty} a_n = A \Leftrightarrow \forall U(+\infty) \exists n_0 \in \N: \forall n \geq n_0: a_n \in U(+\infty)$
+\end{definition}
+
+\begin{definition}
+$\lim_{n \to \infty} a_n = +\infty \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \N: \forall n \geq n_0: a_n < -\frac{1}{\epsilon} = U_\epsilon (-\infty)$
+\end{definition}
+
+
+\begin{definition}[]
+	$\lim_{n \to \infty} a_n = A \Leftrightarrow \forall U(-\infty) \exists n_0 \in \N: \forall n \geq n_0: a_n \in U(-\infty)$
+\end{definition}
+
+\begin{note}[]
+	Cauchy's definition with neighbourhoods is \textbf{universal}.
+\end{note}
+
+A Subsequence converges, if it has a limit $A \in \R$.
+
+\begin{property}[of subsequences, that have a limit]
+	Let $\lim_{n \to \infty} a_n = A$. Then: 
+	\begin{enumerate}
+		\item $\forall A \in \overline{\R}: \text{ a limit is the only one } $. Then 2 neighbourhoods exists that dont intersect (always). Then we get 2 limits that are the same.
+		\item For $A \in \R: a_n $ is bounded. 
+			\begin{proof}[Доказательство]
+				$\epsilon = 1: \exists n_0: \forall n \geq n_0 \left| a_n - A \right| < 1 \Rightarrow 0 A-1 < a_n < A+1$. $m = \min \left\{ a_1, \dots , a_{n_0-1}, A - 1 \right \}, M = \max \left\{ a_1, \dots , a_{n_0-1}, A+1 \right \} $
+			\end{proof}
+		\item For $A \in \overline{\R}: \text{ all } a_n \in U(A), \text{ except finite number } $ 
+	\end{enumerate}
+\end{property}

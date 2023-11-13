@@ -60,6 +60,9 @@
 \let\la\leftarrow
 \let\emb\hookrightarrow
 
+%%% DISPLAYSTYLE
+
+\everymath{\displaystyle}
 %%% Перенос знаков в формулах (по Львовскому)
 \newcommand{\hm}[1]{#1\nobreak\discretionary{}{\hbox{$\mathsurround=0pt #1$}}{}}
 
@@ -129,7 +132,7 @@
 \newcommand{\CourseDate}{осень 2023}
 \newcommand{\AuthorInitials}{Александр Калиев}
 \newcommand{\VKLink}{https://vk.com/alekandrkaliev}
-\newcommand{\GithubLink}{https://github.com/llexender/itmo-tex-lectures}
+\newcommand{\GithubLink}{https://www.youtube.com/watch?v=dQw4w9WgXcQ}
 
 %%% Колонтитулы
 \usepackage{titleps}
@@ -189,6 +192,9 @@
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
+
+% SMILEYS !!!
+\usepackage{wasysym} 
 
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}

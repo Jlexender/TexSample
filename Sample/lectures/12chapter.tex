@@ -1,0 +1,104 @@
+\section{2023-10-20}
+
+\begin{definition}[]
+	$e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right) ^n$
+\end{definition}
+
+\begin{lemma}
+	$e = 1 + \frac{1}{1!} + \frac{1}{2!} + \dots + \frac{1}{n!} + \frac{\theta}{n \cdot n!}$
+\end{lemma}
+\begin{proof}[Доказательство]
+	$\lim_{n \to \infty} e_n = e$. With fixed n: \[
+		e - e_n = \lim_{k \to \infty} e_k - e_n = \lim_{k \to \infty} \frac{1}{(n+1)!} + \dots + \frac{1}{k!}
+	\]
+
+	$k = n + p, p \in \N$
+
+	$
+		\frac{1}{(n+1)!} + \dots + \frac{1}{(n+p)!} = \frac{1}{(n+1)!} \left( 1 + \frac{1}{n+2} + \\ \frac{1}{(n+2)(n+3)} + \dots + \frac{1}{(n+2)(n+3) \dots (n+p)} \right) < \frac{1}{n \cdot n!}
+	$
+\end{proof}
+
+\begin{corollary}[]
+	$e \in I$
+\end{corollary}
+
+\begin{proof}[Доказательство]
+	Let $e = \frac{m}{n} \Rightarrow e = 1 + \frac{1}{1!} + \frac{1}{2!} + \dots + \frac{1}{n!} + \frac{\theta}{n \cdot n!} \Rightarrow m(n-1)! = n! + n! + \frac{n!}{2} + \dots + \frac{n!}{n!} + \frac{\theta}{n} !?$
+\end{proof}
+
+\subsection{Subsequences}
+
+Let $a_n$ be a subsequence.
+
+\begin{definition}[]
+	Let $n_k: n_1 < n_2 < \dots < n_{k+1} < \dots $
+
+	$a_{nk}$ is a subsequence of $a_n$
+\end{definition}
+
+\begin{definition}[]
+	If $\exists \lim_{k \to \infty} a_{nk} = A \in \overline{\R}$, then it's called partial limit.
+\end{definition}
+
+\begin{example}[]
+	\begin{enumerate}
+		\item $a_n = (-1)^{n}: a_{2k} = 1, a_{2k-1} = -1$
+		\item $a_{n} = n^{(-1)^{n}}: a_{2k} = 2k, a_{2k-1} = \frac{1}{2k-1}$ 
+		\item $a_n = 1,1,2,1,2,3,1,2,3,4, \dots $. $\N \cup +\infty$
+		\item $a_n: 1, \frac{1}{2}, \frac{1}{3}, \frac{2}{3}, \frac{2}{4}, \dots $. $\left[ 0,1 \right]$ 
+	\end{enumerate}
+\end{example}
+
+\begin{lemma}
+	If $\lim_{n \to \infty} a_n = A \in \overline{\R}$, then $\forall a_{nk}: \lim_{k \to \infty} a_{nk} = A$
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	$\forall \epsilon > 0 \exists n_0: \forall n \geq n_0: a_n \in U_{\epsilon}(A)$. $n_k \uparrow$ and not bounded above, then  $\exists k_0: n_{k_0} \geq n_0 \Rightarrow \forall k \geq k_0 a_{nk} \in U_\epsilon(A) \Rightarrow \lim_{k \to \infty} a_{nk} = A$.
+\end{proof}
+
+\begin{theorem}[Больцано-Вейерштрасса]
+	\begin{itemize}
+		\item We can choose a subsequence that has a limit in \textbf{any} limited sequence.
+	\end{itemize}
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	\begin{enumerate}
+		\item Множество значений последовательности конечно. $ \Rightarrow $ хотя бы 1 значение встречается бесконечное число раз $ \Rightarrow \exists a_{nk} \equiv \text{ const } $.
+		\item Infinite set of values.
+
+			Bounded $ \Rightarrow \exists \text{ a limit point of X } \Rightarrow \forall  \overset{o}U_\epsilon (x) \text{ there is infinite amount of elements }  $ 
+
+			Let $\epsilon = 1 \Rightarrow a_{n_1} =  \overset{\circ}U _1 (x) $
+
+			Let $\epsilon = \frac{1}{2} \Rightarrow \exists n_2 > n_1: a_{n_2} \in  \overset{\circ}U_{\frac{1}{2}}(x) $
+
+			$\vdots$
+
+			 $\epsilon = \frac{1}{k} \Rightarrow \exists n_k > n_{k+1}: a_{n_k} \in  \overset{\circ}U_{\frac{1}{k}} (x) $
+
+			 $ \Rightarrow  \exists k: \left| a_{n_k} - x \right| < \frac{1}{k} < \epsilon \Rightarrow a_{n_k} \mapsto x $
+	\end{enumerate}
+\end{proof}
+
+\begin{corollary}[]
+	$\forall a_n : $ a set of partial limits is not empty.
+\end{corollary}
+
+\begin{definition}[]
+	Upper limit is the biggest partial limit. Same for lowest
+\end{definition}
+
+$\limsup_{n \to \infty} a_{n}, \liminf_{n \to \infty} a_n$
+
+
+
+\begin{theorem}[closedness of set of partial limits]
+	Let $a_n$ be a limited set, $E$ is a set of partial limits. 
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Let $x$ be a limit point of $E$. Then $ \forall \epsilon > 0 \exists a \in E: a \in \overset{o}U_\epsilon  (x), \text{ i.e. } \left| x - a \right| < \frac{\epsilon}{2} \Rightarrow \exists a_{nk} \to a$. Consider $\left| a_{nk} - x \right|  \leq \left| a_{nk} - a \right| + \left| x - a \right| < \epsilon $. Then $x \in E \Rightarrow E \text{ is closed } $ 
+\end{proof}

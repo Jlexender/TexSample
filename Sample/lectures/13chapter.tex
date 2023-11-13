@@ -1,0 +1,87 @@
+\section{2023-10-30}
+
+\begin{exercise}
+	Докажите теоремы Тёплица и Штольца
+\end{exercise}
+
+Consider $b_k = \sup_{n \geq k} a_n$. Then $b_k \downarrow \Rightarrow \exists \lim_{k \to \infty} b_k \in \overline{R}$.
+
+\begin{lemma}
+	$\lim_{k \to \infty} b_k = \limsup_{n \to \infty} a_n$
+\end{lemma}
+\begin{proof}[Доказательство]
+	\begin{enumerate}
+		\item $a_{n_{k}} \leq b_{k_{k}} \Rightarrow \lim_{k \to \infty} a_{n_{k}} \leq \lim_{k \to \infty} b_k$
+	\item $\forall k \in \N: \exists n_k > n_{k-1}: b_k - \frac{1}{k} \leq a_{n_{k} \leq b_k} \Rightarrow a_{n_{k}} \to \lim_{k \to \infty} b_k$ 
+	\end{enumerate}
+\end{proof}
+
+\begin{theorem}[Cryteria of limit]
+	$\exists \lim_{n \to \infty} a_n \in \overline{R} \Leftrightarrow \limsup_{n \to \infty} a_n = \liminf_{n \to \infty} a_n$
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	$ \leq: \inf_{n \geq k} \leq a_k \leq \sup_{n \geq k} a_n \Rightarrow \lim_{k \to \infty} a_k = \lim_{n \to \infty} a_n$
+\end{proof}
+
+\subsection{KK}
+
+\begin{theorem}[]
+	$a_n \text{ is fundamental if } \forall \epsilon > 0 \exists n_0: \forall n \geq n_0, p \in \N: \left| a_{n + p} - a_n \right| < \epsilon$
+
+	$a_n \text{ is limited } \Leftrightarrow a_n \text{ is fundamental } $.
+\end{theorem}
+\begin{proof}[Доказательство]
+	$ \leq  : \lim_{n \to \infty} a_n = A \in \R. \forall \epsilon > 0: \exists n_0: \forall n \geq n_0: \left| a_n - A \right| < \frac{\epsilon}{2}$. Consider $\left| a_{n+p} - a_n \right| \leq \left| a_{n+p} - A \right| + \left| a_n - A \right|  < \epsilon $.
+
+	$ \Rightarrow $
+	\begin{enumerate}
+		\item For $\epsilon = 1: \exists n_0: \forall n \geq n_0, p \in \N: \left| a_{n+p} - a_n \right| < 1 \Rightarrow a_{n_0} - 1 < a_{n_0 + p} < a_{n_0} + 1 \\ m = min \left\{ a_{n_0} - , \dots, a_{n_0} \right \} $.
+
+			$M = \max \left\{ a_{n_0} + 1, a_1, \dots , a_{n_0} \right \} $.
+		\item $a_n \text{ is limited } \Rightarrow \exists a_{n_k} \to A \Rightarrow \text{ for } \epsilon > 0 \exists k_0: \forall k \geq k_0 \left| a_{n_k} - A \right| < \frac{\epsilon}{2} $
+
+			Consider $\left| a_{n} - A \right| \leq \left| a_{n} - a_{n_k} \right| + \left| a_{n_k} - A \right| < \epsilon \text{ by Fundamentality + definition of boundndess }$
+	\end{enumerate}
+\end{proof}
+
+\begin{example}[]
+	$a_n = \zeta(1)$ diverges.
+\end{example}
+
+\begin{theorem}[Stolz]
+	Let $x_n, y_n$ be subsequences. $y_n $ strictly  $\uparrow$. Then if \begin{enumerate}
+		\item $y_n \to +\infty$ or,
+		\item $y_n \to 0 \ \& \ x_n \to 0$, 
+	\end{enumerate} then $\lim_{n \to \infty} \frac{x_n}{y_n} = \lim_{n \to \infty} \frac{x_n - x_{n-1}}{y_n - y_{n-1}}$
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Let $y \to +\infty$. $y_n > 0$ нснн.
+	\begin{enumerate}
+		\item A = 0:
+			$\forall \epsilon > 0 \exists n_0: \forall n \geq n_0: \left| \frac{n_n - x_{n-1}}{y_n - y_{n-1}} \right| < \epsilon $. $\left| x_n - x_{n-1} \right| < \epsilon \cdot \left( y_n - y_{n-1} \right)  $. Consider $\left| x_{n+p} - x_n \right| = \left| x_{n+p} - x_{n+p-1} + x_{n+p-1} - \dots  + x_{n+1} - x_n \right| \leq \left| x_{n+p} - x_{n+p-1} \right| + \dots + \left| x_{n+1} - x_n \right| < \epsilon \cdot \left( \left( y_{n+p} - y_{n+p-1} \right) + \dots + \left( y_{n+1} - y_n \right)  \right)  = \epsilon \left( y_{n+p} - y_n \right) < \epsilon y_{n+p} $
+
+		$\left| \frac{x_{n+p}}{y_{n+p}} - \frac{x_n}{y_{n+p}} \right| < \epsilon $. Then $\left| \frac{x_{n+p}}{y_{n+p}} \right| < \left| \frac{x_n}{y_{n+p}} \right| + \epsilon \Rightarrow  \lim_{n \to \infty} \frac{x_n}{y_n} = 0 $
+	\item $A \neq 0, A \in \R$
+
+	Consider $z_n = x_n - A \cdot y_n$. Then $\frac{z_n - z_{n-1}}{y_n - y_{n-1}} = \frac{x_{n} - x_{n-1}}{y_{n} - y_{n-1}} - A \to 0 \Rightarrow \frac{z_n}{y_n} \to 0 \Rightarrow \frac{x_n}{y_n} - A \to 0$
+\item $A = +\infty \Rightarrow \text{ нснн } \frac{x_n - x_{n-1}}{y_n - y_n{n-1}} > 1 \Rightarrow x_{n} - x_{n-1} > y_n - y_{n-1} > 0 \Rightarrow x_n \uparrow$
+	\begin{align*}
+		x_{n+p} - x_{n+p-1} > y_{n+p} - y_{n+p-1} \\
+		\dots \\
+		x_{n+1} - x_n > y_{n+1} - y_n \\
+		\hline x_{n+p} - x_n > y_{n+p} - y_n;
+	\end{align*}
+	With fixed $n, p \to +\infty \Rightarrow x_n \to +\infty$, i.e. $\frac{y_n - y_{n-1}}{x_n - x_{n-1}} \to 0 (>0)$ and $x \uparrow, x_n \to +\infty \Rightarrow \frac{y_n}{x_n} \to 0 \text{ and } >0 \Rightarrow \frac{x_n}{y_n} \to +\infty$
+	\end{enumerate}
+\end{proof}
+
+Consider $a_n = \zeta (1). b_n = \ln (n+1)$
+
+Consider $\frac{a_n - a_{n-1}}{b_n - b_{n-1}} = \frac{\frac{1}{n}}{\ln \left( 1 + \frac{1}{n} \right) } = \frac{1}{\ln \left( 1 + \frac{1}{n} \right) ^{n}}$. We know that $\left( 1 + \frac{1}{n} \right) ^{n} < e, \left( 1 + \frac{1}{n} \right) ^{n} \downarrow \Rightarrow \left( 1 + \frac{1}{n} \right) ^{n} \leq e \leq \left( 1 + \frac{1}{n} \right) ^{n+1}$.
+ \[
+ \frac{1}{n+1} < \ln \left( 1 + \frac{1}{n} \right) < \frac{1}{n}, \text{ then } 1 < \frac{\frac{1}{n}}{\ln \left( 1 + \frac{1}{n} \right)} < \frac{n+1}{n} .
+\]
+
+Euler's constant: $\gamma = \lim_{n \to \infty} \left( a_n - b_n \right) $

@@ -1,0 +1,56 @@
+\section{2023-09-29}
+
+\subsection{cardinality of a set}
+
+\begin{definition}[]
+	Consider 2 sets $A, B$. We call them equal-powered, if a biection exists. 
+\end{definition}
+
+\begin{example}[]
+	$\N \sim 2\N$
+\end{example}
+
+\begin{definition}[]
+	The class of equality that our element are in is called a cardinality of a set. 
+\end{definition}
+
+If a set is finite, then we assume it's cardinality as a number of elements.
+
+A set is \textit{countable} if a biection $f: A \mapsto \N$ exists. (i.e. we can enum a set)
+
+\subsubsection{Properties of countable sets}
+
+\begin{enumerate}
+	\item Any infinite set has a countable set inside.
+	\item Any infinite subset of countable set is countable. 
+		\begin{proof}[Доказательство]
+			Consider $\N, A \subset \N, A \text{ is finite } $. Then A is bounded below $ \Rightarrow \exists \min A = a_1$. A set is bounded and closed $ \Rightarrow \exists \min(A \ \backslash \  \left\{ a_1 \right \} ) = a_2$, and so on... 
+
+			Let $a \in A, \left\{ x \in A: x < a \right \} \text{ is finite } $
+		\end{proof}
+	\item $\N \times \N$ is a countable set. Proof is trivial. (BY PASTOR A.V.) 
+	\item $\Z$ is countable. Super trivial.
+	\item $\Q$ is countable. Proof is also trivial (BY PASTOR A.V.) 
+	\item $A,B \text{ is NMTC } \Rightarrow A \cup B, A \cap B, A \times B \text{ is also NMTC } $
+	\item $A_1, A_2, \dots, A_n$ are NMTC. Then $\bigcup_{i = 0} ^ n A_i$ is NMTC. Proven by Pastor A. V. 
+\end{enumerate}
+
+\subsubsection{Canthor's theorem}
+
+\begin{theorem}[]
+	$\left[ 0,1 \right] \text{ is uncountable } $.
+	\begin{proof}[Доказательство]
+		Let there be a biection $\left[ 0,1 \right] \mapsto \N$.Then $\exists \left[ a_1,b_1 \right] \subset \left[ 0,1 \right]: x_1 \notin \left[ a_1, b_1 \right]; \exists \left[ a_2,b_2 \right] \subset \left[ 0,1 \right]: x_2 \notin \left[ a_2, b_2 \right]; \dots $. By Canthor's theorem $\exists c: c \in \text{ all segments } \Rightarrow c \neq x_i$
+	\end{proof}
+\end{theorem}
+
+\begin{lemma}
+	Continuums: $\left<  a,b \right>, \left<a, +\infty), (-\infty, a\right>, \R  $
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	\begin{enumerate}
+		\item $y(x) = a + x \cdot (b-a), x \in \left[ 0,1 \right]$
+		\item $\left[ 0,1 \right] \mapsto \left(0, 1 \right]: \frac{1}{n} \mapsto \frac{1}{n+1}, n \geq 2$ 
+	\end{enumerate}
+\end{proof}

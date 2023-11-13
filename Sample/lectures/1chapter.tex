@@ -1,3 +1,131 @@
+\section{2023-09-04}
+\subsection{Intro}
+Lecturer: Trifanova Ekaterina Stanislavovna
+
+Telegram: @estrifanova
+
+The whole semester is splitted by 3 parts, each of them contains: 
+\begin{enumerate}
+	\item control test 
+	\item theory test (on GeoLin) 
+	\item hometask
+	\item colloquium 
+\end{enumerate}
+
+\textbf{Summary: 100 p.}
+
+The course is linked to A. Boytsev's course.
+
+\subsection{Logical symbolic}
+
+\begin{definition}[]
+	A statement is a sentence that is either \textbf{true} or \textbf{false}.
+\end{definition}
+ 
+\begin{itemize}
+	\item $\forall$ -- for all 
+	\item $\exists$ -- exists 
+	\item ! -- single
+	\item $\sqsupset$ -- let
+\end{itemize}
+
+\begin{example}[]
+	$\forall a \in \N \ \exists ! \ b \in \N: a + b = 0 $
+\end{example}
+
+$A \Rightarrow B, A \Leftarrow B, A \Leftrightarrow B$
+\[
+	A = "a \ \vdots \ 6" \\
+	B = "a \ \vdots \ 3" \\
+	A \implies B
+\]
+
+$\wedge \text{ -- conjunction}, \vee \text{ -- dis junction}$. 
+\[
+	A \iff B \vee C
+\]
+
+\begin{lemma}
+	A is true $\iff$ $\neg$ A is false
+\end{lemma}
+
+\pagebreak
+\subsection{Sets}
 
 
+\begin{definition}[]
+	A set is a group of an objects, with defined rule which can define, is object in a set or not 
+\end{definition}
 
+Парадокс Рассела (множество множеств, которое не содержит себя в качестве элемента)
+
+$a \in A$
+
+$b \notin A \iff \neg(b \in A)$
+
+\begin{definition}[]
+	$A \subset B \iff \forall a \in A \implies a \in B$
+\end{definition}
+\begin{definition}[]
+	$A = B \iff A \subset B \wedge B \subset A$
+\end{definition}
+
+\subsection{Operations between sets}
+
+\begin{enumerate}
+	\item Union -- $A \cup B = \{x: x \in A \vee x \in B\}$
+	\item Intersection -- $A \cap B = \{x: x \in A \wedge x \in B\}$
+\end{enumerate}
+
+Let $A$ be a set of indexes. $\alpha \in A. \ \alpha \mapsto G_\alpha$. We want do define a union of $n$ sets.
+
+\begin{definition}[]
+\[
+	\bigcup_{\alpha \in A} G_\alpha = \{x : \exists \alpha: x \in G_\alpha\} = G_{A_1} \cup G_{A_2} \cup G_{A_3} \cup \dots \cup  G_{A_n} 
+\]
+\end{definition}
+
+\begin{definition}[]
+\[
+	\bigcap_{\alpha \in A} G_\alpha = \{x : \forall \alpha: x \in G_\alpha\} = G_{A_1} \cap G_{A_2} \cap G_{A_3} \cap \dots \cap  G_{A_n} 
+\]
+\end{definition}
+
+\begin{definition}[]
+\[
+	A \ \backslash \ B = \left\{ x: x \in A \wedge x \notin B \right\} 
+\]
+\end{definition}
+
+We define $U$ is an universal set: $\forall x: x \in U$. 
+
+$U \ \backslash \ A = A^{c} $ -- complement ion.
+
+$A \times B$ -- desert multiplication of sets. $A \times B = \left\{ (x, y): x \in A, y \in B \right\} $
+
+\begin{lemma}[Свойства операций]
+	$\forall A, B, C$:
+	 \begin{enumerate}
+		\item $A \cup B = B \cup A$ (коммутативность)
+		\item $A \cap B = B \cap A$ (коммутативность)
+		\item $A \cup (B \cup C) = (A \cup B) \cup C$ (ассоциативность)
+		\item $A \cap (B \cap C) = (A \cap B) \cap C$ (ассоциативность)
+		\item $A \cup A = A \cup \varnothing = A$
+		\item $A \cap \emptyset = \emptyset$
+		\item $A \cap A = A$
+		\item $A \cup A^{c} = U$
+		\item $A \cap A^{c} = \emptyset$
+		\item $(A^{c})^{c} = A$
+	\end{enumerate}
+\end{lemma}
+
+\begin{exercise}
+	Доказать верхние 10 свойств. Доказательство достаточно тривиально.
+\end{exercise}
+\begin{note}
+	Доказательство следует из определения.
+\end{note}
+
+\begin{theorem}[великая теорема Ферма]
+	$\forall x,y,z \in \Z: x,y,z > 2: x^{n} + y^{n} = z^{n}$ не имеет решений.	
+\end{theorem}

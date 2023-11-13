@@ -1,0 +1,142 @@
+\section{2023-09-18}
+
+\subsection{Бином Ньютона}
+
+\begin{definition}[Binomial coefficients]
+	$C_n^k = \frac{n!}{k!(n-k)!}, n \in \N, k \in \N \ \backslash \  \left\{ 0 \right \} , k \leq n$
+\end{definition}
+
+\begin{exercise}
+	Вывести.
+\end{exercise}
+
+\begin{property}[]
+	$\\$
+	\begin{enumerate}
+		\item $C^0_n = C^n_n = 1$ (trivial)
+		\item $C^1_n = C_{n}^{n-1} = n$ 
+		\item $C_n^k = C_n^{n-k}$ 
+		\item $C_n^k + C_n^{k+1} = C_{n+1}^{k+1}$ 
+			\begin{exercise}
+				Proof using Pascal's triangle (trivial).
+			\end{exercise}
+			\begin{proof}[Доказательство]
+			$C_n^k + C_n^{k+1} = \frac{n!}{k!(n-k)!} + \frac{n!}{(k+1)!(n-k-1)!} = \frac{n!}{k!(n-k-1)!} \cdot \left( \frac{1}{n-k} + \frac{1}{k+1} \right) = \\ = \frac{(n+1)!}{(k+1)! \cdot (n-k)!} = C_{n+1}^{k+1} $
+			\end{proof}
+	\end{enumerate}
+\end{property}
+
+\begin{theorem}[Binomial theorem]
+	$\forall a,b \in \R, \forall n \in \N: (a+b)^{n} = \sum_{k=0}^{n} C_n^{k} a^k b^{n-k}$
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Proving using induction.
+		\begin{itemize}
+			\item $n = 1: (a+b)^{1} = C_1^{0}a^{1} + C_1^{1}b^{1} = a+b$
+			\item let $n = k: (a+b)^{k} = \sum_{m=0}^{k} C_k^{m} a^m b^{k-m}$ 
+		\item Transition: $(a+b)^{m} \cdot (a+b) = (\sum_{m=0}^{k} C_k^{m} a^m b^{k-m}) \cdot (a+b) = C_m^{0} a^{m+1}b^{0} + \dots + C_m^{m}a^{1}b^{m} + C_m^{0}a^{m}b^{1} + \dots + C_m^{m}a^{0}b^{m+1} =^{\text{ using property 1.4 }} = C_{m+1}^{0}a^{m_1}b^{0} + (C_m^{1} + C_m^{0})a^{m}b^{1} + (C_m^{2} + C_m^{1})a^{m-1}b^{2} + \dots + (C_m^{k+1} + C_m^{k})(a^{m-k}b^{k+1}) + \dots + (C_m^m + C_m^{m-1})a^{1}b^{m} + C_{m+1}^{m+1} = \sum_{k=0}^{m+1} C_{m+1}^{k} a^{k}b^{m+1-k}$ 
+		\end{itemize}
+\end{proof}
+
+\subsection{Defining intervals on $\R$}
+
+\begin{definition}[]
+	отрезок: $[a,b] = \left\{ x \in \R: a \leq x \leq b \right \} $	
+	
+	interval: $\left( a,b \right) = \left\{ x \in \R: a < x < b \right \} $
+	
+	semi-interval: $(a, b], [a, b) = \left\{ x \in \R: a < x \leq b \right \}, \left\{ x \in \R: a \leq x < b \right \}  $
+
+	луч: $(-\infty, a), (-\infty, a], [b, +\infty), (b, +\infty)$
+\end{definition}
+
+\begin{definition}[Окрестность точки $x_0$]
+	 $x_0 \in (a,b) = U(x_0)$ (including $(-\infty, a), (b, +\infty)$)
+
+	 $\epsilon$-neighbourhood:  $(x_0-\epsilon, x_0+\epsilon) = U_\epsilon (x_0)$
+\end{definition}
+
+\begin{definition}[$\epsilon$-neighbourhood for $\overline{\R}$]
+	\begin{itemize}
+		\item  $+\infty: (a; +\infty) = U(+\infty)$
+		\item $-\infty: (-\infty, a) = U(-\infty)$ 
+		\item $\infty = U(+\infty) \cup U(-\infty)$ 
+		\item $U_\epsilon(+\infty) = (\frac{1}{\epsilon}; +\infty); U_\epsilon(-\infty) = (-\infty, -\frac{1}{\epsilon})$ 
+	\end{itemize}
+\end{definition}
+
+\subsection{Absolute value}
+
+\begin{definition}[]
+	$\forall x \in \R: |x| = \begin{cases}
+		x, &\text{ if }x>0\\
+		-x, &\text{ if }x \leq 0
+	\end{cases}$
+\end{definition}
+
+\begin{property}[]
+	\begin{enumerate}
+		\item $|x| = |-x|$
+		\item $|x|^2 = x^2$ 
+		\item $|x| \geq 0; |x| = 0 \Leftrightarrow x = 0$ 
+		\item $|xy| = |x||y|$
+		\item $\frac{|x|}{|y|} = \left| \frac{x}{y} \right|$ 
+		\item $-|x| \leq x \leq |x|$ 
+		\item $|x+y| \leq |x| + |y|$ 
+			\begin{proof}[Доказательство]
+				$(x+y)^2 \leq x^2 + y^2 + 2|xy| \Leftrightarrow 2xy \leq |2xy|$
+			\end{proof}
+		\item $|x| \leq a \Leftrightarrow -a \leq x \leq a$
+		\item $|x| \geq b \Leftrightarrow x \leq -b \vee x \geq b$ 
+		\item $|x-y| \geq \left| |x| - |y| \right| $ 
+	\end{enumerate}
+\end{property}
+
+\subsection{Bounds of the set in $\R$}
+
+Let $X \subset \R$ 
+\begin{definition}[]
+	We say that $X$ is \textit{bounded above}, if $\exists M \in \R: x \leq M \forall x \in X$ ($M$ is upper bound)
+
+	We say that $X$ is \textit{bouded below}, if $\exists m \in \R: m \leq x, \forall x \in X$ ($m$ is lower bound)
+
+	We assume that $X$ is \textbf{bounded}, if its \textit{bounded both below and above}.
+\end{definition}
+
+\begin{example}[]
+	Let $X = [0, 1)$
+\end{example}
+
+\begin{definition}[min and max element]
+	max. element: $x_{\max} = \max X: x_{\max} \in X, \forall x \in X: x \leq x_{\max}$
+\end{definition}
+
+\begin{note}[]
+	$X$ doesn't have max. element.
+	\begin{proof}[Доказательство]
+		Let $M = \max X$. Then,  $\exists M_0 \in \frac{M+1}{2} > M !?$
+	\end{proof}
+\end{note}
+
+\begin{definition}[supremum and infremum of the set]
+	$S \in \R$ is called \textit{an exact upper bound}, (or a \textit{supremum of X}), if $S = \text{ lowest upper bound } $ 
+
+	We denote is as $\sup X = S = \min \left\{ M: x \leq M \forall x \in X \right \} $ 
+
+	If $X$ is not bounded above, then $\sup X = +\infty$
+
+	$s \in \R$ is called \textit{an exact lower bound}, (or an \textit{infremum} of X), if $S = $ highest lower bound. We denote it as  $s = \inf X = \max \left\{ m: x \geq m, \forall x \in X \right \} $
+\end{definition}
+
+\begin{note}[]
+	$X = \left\{ x \in \Q: x^2<2 \right \} \Rightarrow \sup X $ is undefined.
+\end{note}
+
+\begin{lemma}
+	$X$ is bounded  $\Leftrightarrow \exists c \in \R: |x| \leq c, \forall x \in X$
+\end{lemma}
+
+\begin{exercise}
+	Proof. 
+\end{exercise}

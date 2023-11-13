@@ -1,0 +1,55 @@
+\section{2023-10-06}
+
+\begin{definition}[limit]
+	$\lim_{n \to \infty} a_n = A \in \overline{\R} \Leftrightarrow  \forall \epsilon > 0 \exists n_0 \in \N \forall n \geq n_0: a_n \in U_\epsilon (A)$
+\end{definition}
+
+\begin{definition}[]
+	$\lim_{n \to \infty} a_n = \infty \Leftrightarrow \lim_{n \to \infty} \left| a_n \right| = +\infty$ 
+
+	$U_\epsilon (\infty) = (-\infty, -\frac{1}{\epsilon}) \cup (\frac{1}{\epsilon}, +\infty)$
+\end{definition}
+
+\begin{theorem}[]
+	Let $\lim_{n \to \infty} a_n = A, \lim_{n \to \infty} b_n = B; A,B \in \R$. Then \begin{enumerate}
+		\item $\lim_{n \to \infty} (a_n + b_n) = \lim_{n \to \infty} a_n + \lim_{n \to \infty} b_n$
+		\item $\lim_{n \to \infty} (a_n b_n) = \lim_{n \to \infty} a_n \cdot  \lim_{n \to \infty} b_n$
+		\item $\lim_{n \to \infty} (\frac{a_n}{b_n}) = \frac{A}{B}, B \neq 0, b_n \neq 0 $
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	\begin{enumerate}
+		\item $\lim_{n \to \infty} a_n = A \Leftrightarrow \forall \epsilon > 0 \exists n_1: \forall n \geq n_1 \Rightarrow \left| a_n - A \right| < \frac{\epsilon}{2}$
+		\item $\lim_{n \to \infty} b_n = B \Leftrightarrow \ \ \ \ \exists n_2: \forall n \geq n_2 \Rightarrow \left| b_n - B \right| < \frac{\epsilon}{2}$ 
+
+			Let $n_0 = \max \left\{ n_1, n_2 \right \} $. Consider $\left| (a_n + b_n) - \left( A + B \right)  \right| = \left| \left( a_n - A \right) + \left( b_n - B \right)  \right| \leq \left| a_n - A \right| + \left| b_n - B \right| < \epsilon  \Leftrightarrow \lim_{n \to \infty} (a_n + b_n)$.
+
+		\item (Упражнение) Trivially proof (identical)  
+	\item Proving that $\lim_{n \to \infty} \frac{1}{b_n} = \frac{1}{B}$. Consuder RHS: $\left| \frac{1}{b_n} - \frac{1}{B} \right| = \frac{\left| b_n - B \right| }{|b_n| \cdot |B|} $. For $n_1 \geq n_2: \left| b_n - B \right| < \frac{|B|}{2} \Rightarrow B - \frac{|B|}{2} < bn < B + \frac{|B|}{2}$. $\left| b_n \right| > C = \min \left\{ \left| B - \frac{\left| B \right| }{2} \right| ; \left| B = \frac{\left| B \right| }{2} \right|  \right \} $ . Then  $\frac{\left| b_n - B \right| }{|b_n| |B|} < \frac{|b_n - B|}{C \cdot |B|} < \frac{1}{C |B|} \cdot \epsilon C |B| < \epsilon$
+	\end{enumerate}
+\end{proof}
+
+\subsection{Operations for $\overline{\R}$}
+
+\begin{proposition}[]
+	Все утверждения для $\R$ и всех операций в  $\overline{\R}$ верны.
+\end{proposition}
+
+\begin{exercise}
+	Докажите это утверждение.
+\end{exercise}
+
+\begin{proof}[Доказательство]
+	$\begin{gathered}
+		a_n \mapsto +\infty \\
+		b_n \mapsto B > 0 
+	\end{gathered} \Rightarrow a_n \cdot b_n \mapsto +\infty$. $\forall \epsilon > 0: \begin{gathered}
+		\exists n_1: \forall n \geq n_1 a_n > \frac{2}{B \cdot \epsilon} \\
+		\exists n_2: \forall n \geq n_2 b_n > \frac{1}{2} B
+	\end{gathered} \Rightarrow \exists n_0 = \max \left\{ n_1, n_2 \right \} : \forall n \geq n_0: a_n \cdot b_n > \frac{1}{\epsilon}$
+\end{proof}
+
+\begin{example}[]
+	$\lim_{n \to \infty} \frac{2n^2 + 3n - 1}{ 4n^2 + n - 2} = \frac{1}{2}$. Доказательство тривиально и не требует подробных рассуждений.
+\end{example}

@@ -1,0 +1,88 @@
+\section{2023-11-06}
+
+\subsection{Limit properties}
+
+
+\begin{theorem}[Properties]
+	Let $\lim_{x \to x_0} f(x) = A, x_0 \in \overline{\R}$. Then
+	\begin{enumerate}
+		\item For $A \in \overline{\R}$ a limit is the only one
+			\begin{proof}[Доказательство]
+				By Geine definition
+			\end{proof}
+	\item For $A \in \R: \exists \overset{\circ} U (x_0): f(x) \text{ is bounded in } \overset{\circ} U(x_0)$
+	\item For $A \in \overline{R} \ \backslash \  \left\{ 0 \right \} \exists \overset{\circ} U (x_0): f(x) \cdot A > 0 \forall x \in \overset{\circ} U_\delta (x_0)$
+		\begin{note}[]
+			Take $\epsilon = \frac{|A|}{2}$.
+		\end{note}
+	\end{enumerate}
+\end{theorem}
+\begin{theorem}[Arithmetic properties]
+	Let $f,g: \R \supset E \to \R, x_0 \text{ is LP of } E, x_0 \in \overline{\R}, \lim_{x \to x_0} f(x) = A, \lim_{x \to x_0} g(x) = B, A,B \in \overline{\R} $. Then 
+	\begin{enumerate}
+		\item $\lim_{x \to x_0} (f+g)(x) = A + B$
+		\item $\lim_{x \to x_0} (fg(x)) = A \cdot B$
+		\item for $g(x)  \neq 0: \lim_{x \to x_0} \frac{f}{g}(x) = \frac{A}{B}$ 
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	By Geine definition.
+\end{proof}
+
+\begin{theorem}[Inequalities]
+	Let $f,g: E \to \R, x_0 \text{ is LP of } E$. Same for the previous one + $A < B$. Then $\exists \overset{\circ} U(x_0): f(x) < g(x) \forall x \in \overset{\circ} U(x_0)$
+	\begin{proof}[Доказательство]
+		Take $\epsilon = \frac{B - A}{3} > 0$. 
+		 \begin{align*}
+			 \exists \delta_1: x \in \overset{\circ} U_{\delta_1} (x_0) \Rightarrow f(x) < A + \epsilon \\
+			 \exists \delta_2: x \in \overset{\circ} U_{\delta_2}(x_0) \Rightarrow g(x) > B - \epsilon \\
+			\text{ Let } \delta = \min \left( \delta_1, \delta_2 \right): f(x) < g(x) 
+		\end{align*}
+	\end{proof}
+\end{theorem}
+
+\begin{corollary}[Предельный переход]
+	Let $f(x) \leq g(x) \text{ in } \overset{\circ} U(x_0) \ \& \ \lim f(x) = A, \lim g(x) = B$. Then $A \leq B$ 
+\end{corollary}
+\begin{proof}[Доказательство]
+	Обратное следствие из теоремы.
+\end{proof}
+
+\begin{theorem}[милиционеры))))))))))))))))]
+	 Let $f,g,h: E \to \R, x_0 \text{ is LP } E, x_0 \in \overline{\R} \ \& \ f(x) \leq g(x) \leq h(x) \text{ for } \forall x \in \overset{\circ} U(x_0) \ \& \ \lim f(x) = \lim h(x)$. Then $\lim g(x) = \lim f(x)$
+\end{theorem}
+\begin{proof}[Доказательство]
+	By Geine definition.
+\end{proof}
+
+\begin{definition}[]
+	Let $f: E \to \R$.  $f$ is increasing $\Leftrightarrow \forall x_1, x_2 \in E: x_1 < x_2 \Rightarrow f(x_1) \leq f(x_2)$
+	Strictly $\uparrow \Leftrightarrow f(x_1) < f(x_2)$
+\end{definition}
+
+Same for (strictly) decreasing \smiley.
+
+\begin{theorem}[Weierstrass]
+	Let $f: E \to \R, s = \sup E \in \overline{\R}, s \text{ is LP of } E, \text{ let } f \uparrow \text{ on } E$. Then $\lim_{x \to s} f(x) = \sup_{x \in E}f(x)$ and $\lim_{x \to s} f(x) \in \R \Leftrightarrow f(x)$ is limited above on E
+\end{theorem}
+\begin{proof}[Доказательство]
+	Let $f$ is increasing. Then $\exists \sup_{x \in E} f(x) = A \in \R$. $\forall \epsilon > 0 \exists x_1 \in E: A - \epsilon < f(x_1) \leq A \Rightarrow \forall x >x_1: A - \epsilon < f(x_1) \leq f(x) \leq A \Rightarrow \lim_{x \to s} f(x) = A$
+\end{proof}
+
+\begin{theorem}[Cauchy cryteria]
+	Let $f: E \to \R, x_0 \text{ is LP of } E$. Then $\exists \lim f(x) \in \R \Leftrightarrow \forall \epsilon > 0 \exists \delta > 0: \forall x_1, x_2 \in \overset{\circ} U_\delta (x_0) \cap E \Rightarrow \left| f(x_1) - f(x_2) \right| < \epsilon$
+\end{theorem}
+\begin{proof}[Доказательство]
+	\fbox{$ \Rightarrow $} By Cauchy definition, $\forall \epsilon > 0 \exists \delta > 0: x \in \overset{\circ} U_\delta (x_0) \cap E \Rightarrow \left| f(x) - A \right| < \frac{\epsilon}{2}$. Take $x_1, x_2 \in \overset{\circ} U_\delta (x_0) \cap E \Rightarrow \left| f(x_1) - f(x_2) \right| \leq \left| f(x_1) - A \right| + \left| f(x_2) - A \right| < \epsilon$
+
+\fbox{$ \Leftarrow $}. By Geine definition, let $x_n: \lim_{n \to \infty} f(x_n) = A$. $x_n \to x_0 \Rightarrow \text{ for } \delta \exists n_0: \forall n \geq n_0: x_n \in \overset{\circ} U_\delta (x_0)$. Then $\left| f(x_{n+p}) - f(x_n) \right| < \epsilon \forall n \geq n_0, p \in \N \Rightarrow f(x_n) $ is fundamental. Then $\exists \lim f(x_n) = A \in \R$
+
+\begin{problem}
+	Do limits have the same value?
+\end{problem}
+
+Proving that $ A$ is the same.
+
+Take $x_n', x_n'': f(x_n') \to A', f(x_n'') \to A''$. Consider $y_n: x_1', x_1'', x_2', x_2'', \dots $. $f(y_n)$ doesnt have a limit if $A' \neq A''$ 
+\end{proof}

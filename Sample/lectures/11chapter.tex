@@ -1,0 +1,85 @@
+\section{2023-10-13}
+
+\subsection{Limit and sequences}
+
+\begin{theorem}[]
+In $\overline{\R}$
+
+	Let $a_n, b_n: \lim_{n \to \infty} a_n = A, \lim_{n \to \infty} b_n = B \ \& \ A < B$. Then $\exists n_0 \in \N: \forall n \geq n_0: a_n < b_n $
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	Let $\epsilon = \frac{B-A}{3}$. Then $\exists n_1: \forall n \geq n_1 a_n < A + \epsilon, \exists n_2: \forall n \geq n_2: B - \epsilon < b_n$.
+
+	Let $n_0 = \max \left\{ n_1, n_2 \right \}. \text{ then } \forall n \geq n_0: a_n < A + \epsilon < B - \epsilon < b_n $.
+\end{proof}
+
+\begin{corollary}[Предельный переход в неравенстве]
+	Let $a_n \rightarrow A \in \overline{\R}, b_n \rightarrow B \in \overline{\R} \ \& \ \exists n_0: \forall n \geq n_0: a_n < b_n. \text{ Then } A \leq B$
+\end{corollary}
+
+\begin{proof}[Доказательство]
+	Let it be false, then by theorem $\exists n_0 : \forall n \geq n_0: a_n > b_n$, which is false by theorem.
+\end{proof}
+
+\begin{note}[Why not strict inequality?]
+	\begin{example}[]
+		$a_n = 0, b_n = \frac{1}{n}, 0 < \frac{1}{n}, \text{ but } A = B$.
+	\end{example}
+\end{note}
+
+\begin{theorem}[compressed variable theorem]
+	Милиционеры)))))))))))))))))))))))))))))))))))))))))))
+	
+	Let $a_n, b_n, c_n: a_n \leq b_n \leq c_n \forall n \geq n_0$. Then $\lim_{n \to \infty} b_n = A = \lim_{n \to \infty} c_n = \lim_{n \to \infty} a_n$ 
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	$\left| a_n - A \right| < \epsilon, \left| c_n - A \right|  < \epsilon$. Let $n_3 = \max(n_1, n_2, n_0)$. Then by theorem $\forall n \geq n_3: A-\epsilon < a_n \leq b_n \leq c_n < A + \epsilon \Rightarrow a_n \in U_e (A)$
+\end{proof}
+
+\subsection{Weierstrass's theorem}
+
+\begin{definition}[]
+	$a_n$ is increasing (strictly increasing) if $n_1 < n_2 \Rightarrow a_{n_1} \leq a_{n_2}$
+
+	Same definition for decreasing sequence.
+\end{definition}
+
+\begin{note}[]
+	$a_n \uparrow \Leftrightarrow a_{n+1} \geq a_n$
+\end{note}
+
+\begin{theorem}[Weierstrass]
+	Let $a_n$ be increasing. Then limitness $ \Leftrightarrow $ boundness. Even:  $\lim_{n \to \infty} a_n = \sup {a_n}$
+\end{theorem}
+
+\begin{proof}[Доказательство]
+	$ \Rightarrow \text{ is obvious by lemma } $.
+
+	$ \Leftarrow. \text{ Let } a_n$ is bouned above then $\exists M = \sup a_n$. Then $\forall \epsilon \exists n_0: M - \epsilon < a_{n_0} \leq M$. But $n \geq n_0: a_n \geq a_{n_0}$, i.e. $M-\epsilon < a_{n_0} \leq a_n \leq M$, i.e. $\forall  n \geq n_0: \left| a_n -M \right| < \epsilon$
+\end{proof}
+
+\begin{note}[]
+	If $a_n$ is not bounded and increasing, then it's limit is $+\infty$, same for decreasing. $\lim_{n \to \infty} a_n = \sup a_n \in \overline{\R}$
+\end{note}
+
+\begin{note}[]
+	Doesnt work for de/increasing not from the beginning. Then only limitness <=> boundness
+\end{note}
+
+\subsection{Comparing sequences}
+
+\begin{lemma}
+	$a^{n} < n!$.
+\end{lemma}
+
+\begin{proof}[Доказательство]
+	$\lim_{n \to \infty} \frac{a^{n}}{n!} = 0$
+	\begin{enumerate}
+		\item $x_n > 0$ -- bounded below.
+		\item $x_{n+1} = \frac{a^{n+1}}{\left( n+1 \right) !} x_n \cdot \frac{a}{n+1} < x_n$ 
+		\item  Consider $x_{n+1} = \frac{a}{n+1}x_n$. Limits:  $A = 0 \cdot A \Leftrightarrow A = 0$
+	\end{enumerate}
+\end{proof}
+

@@ -1,0 +1,76 @@
+\section{2023-11-10}
+
+\subsection{infinitesimal and infinity large functions}
+
+Let all functions be in a set of LP. Then $f: E \to \R$.
+
+\begin{definition}[]
+    If $\lim_{x \to x_0} \alpha(x) = 0$ then $\alpha(x)$ is infinitesimal function in $x_0 (x \to x_{0})$ 
+
+    If $\lim_{x \to x_0} \beta(x) = \infty, \text{ then } \beta(x)$ is infinitely large in $x_0$.
+\end{definition}
+
+\begin{lemma}
+    Let $\alpha(x)$ be infinitesimal and $\beta(x)$ is infinitely large. Then \begin{enumerate}
+        \item $\lim_{x \to x_0} \frac{1}{\beta(x)} = 0$ 
+        \item $\lim_{x \to x_0} \frac{1}{\alpha(x) = \infty}, \text{ if $\alpha(x) \neq 0$ } $ 
+    \end{enumerate}
+\end{lemma}
+
+\begin{lemma}
+    Let $\alpha_1, \alpha_2$ be infinitesimal for $x \to x_0$. Then \begin{enumerate}
+        \item $\alpha_1(x) \pm \alpha_2(x)$ is infinitesimal.
+        \item $\alpha_1(x) \cdot \beta(x)$ is infinitesimal if $\beta(x)$ is limited in $\overset{\circ} U(x_0)$
+    \end{enumerate}
+\end{lemma}
+
+\begin{exercise}
+    Proof the 1st statement
+\end{exercise}
+
+\begin{proof}[Доказательство 2 пункта]
+    Let $m \leq \beta(x) \leq M$, then $\left| \beta(x) \right| < C \Rightarrow 0 \leq \left| \alpha_1(x) \cdot \beta(x) \right| \leq C \cdot \left| \alpha_1(x) \right| \to 0  $
+\end{proof}
+
+\subsection{One sided limits}
+
+Let $x_0 \in \R$.
+
+\begin{definition}[]
+    $U^{+}(x_0) = U(x_0) \cap \left\{ x: x > x_0 \right \} $
+    $U^{-}(x_0) = U(x_0) \cap \left\{ x: x < x_0 \right \} $
+\end{definition}
+
+\begin{definition}[]
+    Let $x_0$ be a LP of $U^{\pm} \cap E, f: E \to \R$. Then $\lim_{x \to x_0 \pm 0} = A \Leftrightarrow \forall \epsilon > 0 \exists \delta > 0: \forall x \in U_\delta^\pm(x_0) \cap E \Rightarrow f(x) \in U_\epsilon(A)$
+\end{definition}
+
+\begin{theorem}[Limit cryteria (one sided limits)]
+   $x_0 \text{ Is LP of } U^{+} \cap E, U^{-} \cap E$. Then $\lim_{x \to x_0} f(x) = A \in \overline{\R} \Leftrightarrow \lim_{x \to x_0+0}f(x) = \lim_{x \to x_0-0} f(x) = A $
+\end{theorem}
+
+\begin{proof}[Доказательство]
+    \fbox{$ \Rightarrow $}. $\forall \epsilon \exists \delta: \forall x \in \overset{\circ} U_\delta (x_0) \cap E \Rightarrow f(x) \in U_\epsilon(A) \Rightarrow \text{ for } x \in U_\delta^+ (x_0) \cap E$ it's true too.
+
+    \fbox{$ \Leftarrow  $}. for $\epsilon > 0 \exists \delta_1 > 0: \forall x \in E: x_0 < x < x_0 + \delta_1 \Rightarrow f(x) \in U_\epsilon (A) \ \& \ \exists \delta_2 > 0: \forall x \in E: x_0 - \delta_2 < x < x_0 \Rightarrow f(x) \in U_\epsilon (A)$
+    Then $\delta = \min \left\{ \delta_1, \delta_2 \right \}: x \in \overset{\circ} U_\delta (x_0) \cap E \Rightarrow f(x) \in U_\delta(A) $
+\end{proof}
+
+\begin{theorem}[In terms of infinitesimal functions]
+    $\lim_{x \to x_0} f(x) = A \in \R \Leftrightarrow f(x) = A + \alpha(x), \text{ where } \alpha(x) \underset{x \to x_0} \to 0$
+\end{theorem}
+
+\subsection{Continuity}
+
+Let $f: E \mapsto \R, x_0 \in E$.
+
+\begin{definition}[]
+    $f$ is continuous in $x_0 \Leftrightarrow \forall \epsilon > 0 \exists \delta > 0: \forall x \in E \cap U_\delta(x_0) \Rightarrow f(x) \in U_\delta(f(x_0)) \Leftrightarrow \forall \epsilon > 0 \exists \delta > 0: \forall x \in E: \left| x - x_0 \right| < \delta \Rightarrow \left| f(x) - f(x_0) \right| < \epsilon \Leftrightarrow \forall V(f(x_0)) \exists U(x_0): f(U(x_0) \cap E) \subset V(f(x_0))$
+\end{definition}
+
+\begin{theorem}[]
+    Let $f: E \to \R, x_0 \in E$. If \begin{enumerate}
+        \item $x_0$ is LP of $E$, then $f$ is continuous in $x_0 \Leftrightarrow \lim_{x \to x_0} f(x) = f(x_0)$
+        \item $x_0$ is not a LP of $E$ ($ \Rightarrow x_0 \text{ is isolated } $. Then $f$ is continuous in $x_0$)
+    \end{enumerate}
+\end{theorem}
